@@ -83,7 +83,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		var scene = currentSelectedAsset
 		var instance = scene.instantiate()
 		%Horse.add_child(instance)
-		instance.global_position = %cursorobj.global_position
-		instance.global_rotation = %cursorobj.global_rotation
-		instance.scale *= 4
+		var params: HorseAccessoryData = HorseAccessoryData.new()
+		params.AccessoryPath = "res://Models/horse.tscn"
+		params.AccessoryTransform = %cursorobj.global_transform
+		%Horse._add_accessory(params)
 		

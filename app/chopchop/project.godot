@@ -15,12 +15,20 @@ run/main_scene="uid://3mhi6vechsl8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Horsinator4000mk7="*uid://bwcjp547wepsh"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=480
 window/size/resizable=false
 window/stretch/mode="viewport"
+
+[global_group]
+
+HorseGroup=""
 
 [input]
 

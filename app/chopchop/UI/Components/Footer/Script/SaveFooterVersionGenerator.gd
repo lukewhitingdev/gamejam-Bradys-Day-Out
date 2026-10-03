@@ -12,8 +12,6 @@ func _on_gui_input(event: InputEvent) -> void:
 	if(event.is_action_pressed("Left_Click")):
 		_generate_version()
 
-	pass # Replace with function body.
-
 func _generate_version():
 	var major = rng.randi_range(0, 24)
 	var minor = rng.randi_range(0, 36)

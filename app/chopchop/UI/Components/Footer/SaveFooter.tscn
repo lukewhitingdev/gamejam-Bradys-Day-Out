@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://da4rmkrkeds84"]
 
 [ext_resource type="Script" uid="uid://b7lpsxll2yxqj" path="res://UI/Components/Footer/Script/SaveFooterVersionGenerator.gd" id="1_cm3yt"]
+[ext_resource type="Script" uid="uid://c8duwubntkob" path="res://UI/Components/Footer/save_footer.gd" id="1_r10ni"]
 
 [node name="SaveFooter" type="HBoxContainer" unique_id=610904564]
 anchors_preset = 12
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 10
 size_flags_vertical = 10
+script = ExtResource("1_r10ni")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=139451529]
 custom_minimum_size = Vector2(400, 30)
@@ -30,4 +32,14 @@ size_flags_horizontal = 10
 size_flags_vertical = 8
 text = "Save"
 
+[node name="Button2" type="Button" parent="." unique_id=1095981818]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+text = "Load
+"
+
 [connection signal="gui_input" from="RichTextLabel" to="RichTextLabel" method="_on_gui_input"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
