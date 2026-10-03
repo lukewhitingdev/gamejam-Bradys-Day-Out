@@ -226,3 +226,4 @@ Score = 5
 [node name="PlinkoHorse" parent="." unique_id=623002710 instance=ExtResource("2_vimka")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2030816, 21.900288, 0.6655054)
 Gravity = 0.5
+BeginCameraPosition = Vector3(6, 15, 20)

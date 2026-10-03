@@ -16,5 +16,8 @@ transform = Transform3D(-4.374508e-07, 0, 5.8426156, 0, 8.407569, 0, -10.007709,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1796, 0)
 shape = SubResource("SphereShape3D_xcrvh")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1876231356]
+[node name="FallingCam" type="Camera3D" parent="." unique_id=1876231356]
+top_level = true
+
+[node name="BeginCam" type="Camera3D" parent="." unique_id=733122560]
 top_level = true
