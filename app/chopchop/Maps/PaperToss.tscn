@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dmyj64hxrkuk3"]
+
+[ext_resource type="PackedScene" uid="uid://bfvpc7bvnn5g4" path="res://GameObjects/PaperTossHorse.tscn" id="1_4g1hd"]
+[ext_resource type="Script" uid="uid://d016f84uksni7" path="res://Maps/paper_toss.gd" id="1_a5irk"]
+[ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="1_ar6bx"]
+
+[sub_resource type="Environment" id="Environment_xrivr"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_13qdw"]
+
+[sub_resource type="Compositor" id="Compositor_b1lj4"]
+
+[node name="PaperToss" type="Node3D" unique_id=178533814]
+script = ExtResource("1_a5irk")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=627856779]
+environment = SubResource("Environment_xrivr")
+camera_attributes = SubResource("CameraAttributesPractical_13qdw")
+compositor = SubResource("Compositor_b1lj4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=841031461]
+transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 15.150552, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=645152459]
+transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 5.7732267, -5.103783, 2.1967869)
+use_collision = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
+transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.510983, -5.103783, 2.1967869)
+use_collision = true
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1294853535]
+transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.85487, -5.103783, -3.1354332)
+use_collision = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1511665687]
+transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, 23.69794, -5.103783, 2.1967869)
+use_collision = true
+
+[node name="PaperTossHorse" parent="." unique_id=623002710 instance=ExtResource("1_4g1hd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19333589, -0.5884664, 4.684843)
+BeginCameraPosition = Vector3(0, 0, 10)
+
+[node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("1_ar6bx")]
+transform = Transform3D(3.020395, 0, 0, 0, 1.6453232, 0, 0, 0, 2.2561955, 5.4685464, -4.578881, -1.2807341)
