@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://da4rmkrkeds84"]
+
+[ext_resource type="Script" uid="uid://b7lpsxll2yxqj" path="res://UI/Components/SaveFooterVersionGenerator.gd" id="1_cm3yt"]
+
+[node name="SaveFooter" type="HBoxContainer" unique_id=610904564]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 10
+size_flags_vertical = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=139451529]
+custom_minimum_size = Vector2(400, 30)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+text = "Horse Visualizer v0.43rc2"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_cm3yt")
+
+[node name="Button" type="Button" parent="." unique_id=429022490]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 8
+text = "Save"
+
+[connection signal="gui_input" from="RichTextLabel" to="RichTextLabel" method="_on_gui_input"]
