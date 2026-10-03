@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bdwvcqeuhxu1j"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqy0q1fgkmb2o" path="res://Assets/Meshes/horn.tres" id="1_ex37j"]
+[ext_resource type="Material" uid="uid://cjxvo3f0w5o6m" path="res://Materials/Props/PropMat.tres" id="2_5aw7y"]
+
+[node name="HornProp" type="Node3D" unique_id=1956702659]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1964399224]
+transform = Transform3D(19.203, 0, 0, 0, 40, 0, 0, 0, 19.203, 0, 0.3760275, 0)
+mesh = ExtResource("1_ex37j")
+surface_material_override/0 = ExtResource("2_5aw7y")

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bytlfirejfd70"]
+
+[ext_resource type="ArrayMesh" uid="uid://deo2lucvuonsm" path="res://Assets/Meshes/angel_wings.tres" id="1_no11o"]
+[ext_resource type="Material" uid="uid://cjxvo3f0w5o6m" path="res://Materials/Props/PropMat.tres" id="2_4ajqn"]
+
+[node name="AngelWingProp" type="Node3D" unique_id=1933979478]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=216369725]
+transform = Transform3D(4.843226, 24.844772, 0, -1.2422386, 96.864525, 0, 0, 0, 19.999998, 0.21850011, 0.26558167, 0.11259401)
+mesh = ExtResource("1_no11o")
+surface_material_override/0 = ExtResource("2_4ajqn")

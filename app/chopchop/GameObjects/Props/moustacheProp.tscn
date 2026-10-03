@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c6u1q0b12ekig"]
+
+[ext_resource type="ArrayMesh" uid="uid://bvk1kn6wvb10g" path="res://Assets/Meshes/moustache.tres" id="1_dof2p"]
+[ext_resource type="Material" uid="uid://cjxvo3f0w5o6m" path="res://Materials/Props/PropMat.tres" id="2_0b782"]
+
+[node name="MoustacheProp" type="Node3D" unique_id=518344714]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1874062566]
+transform = Transform3D(-8.742278e-07, -20.000002, 0, 20, -8.7422785e-07, 0, 0, 0, 20.000002, 0.19833204, -0.0065081716, -0.0138401985)
+mesh = ExtResource("1_dof2p")
+surface_material_override/0 = ExtResource("2_0b782")

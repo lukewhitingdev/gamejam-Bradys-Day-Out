@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://c71oqg5dgctwa"]
 
+[ext_resource type="ArrayMesh" uid="uid://bjianj8qwsjxk" path="res://Assets/Meshes/duck.tres" id="1_1hqx3"]
+[ext_resource type="Material" uid="uid://cjxvo3f0w5o6m" path="res://Materials/Props/PropMat.tres" id="2_1hqx3"]
+
 [node name="DuckProp" type="Node3D" unique_id=1923840230]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=357148621]
+mesh = ExtResource("1_1hqx3")
+surface_material_override/0 = ExtResource("2_1hqx3")

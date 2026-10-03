@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bv8mpqxmsekxu"]
+
+[ext_resource type="ArrayMesh" uid="uid://iju3nwv8q6hx" path="res://Assets/Meshes/egg.tres" id="1_6leqk"]
+[ext_resource type="Material" uid="uid://cjxvo3f0w5o6m" path="res://Materials/Props/PropMat.tres" id="2_4ee8d"]
+
+[node name="eggProp" type="Node3D" unique_id=1630059133]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1297512148]
+transform = Transform3D(-30, 4.371139e-07, 0, -2.6226833e-06, -5, 0, 0, 0, 30, 0, 0, 0)
+mesh = ExtResource("1_6leqk")
+surface_material_override/0 = ExtResource("2_4ee8d")
