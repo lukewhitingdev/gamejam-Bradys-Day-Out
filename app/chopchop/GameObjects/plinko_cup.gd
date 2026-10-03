@@ -1,7 +1,7 @@
-extends Node3D
+class_name PlinkoCup extends Node3D
 
 var my_body_array = []
-@export var Score = 0
+@export var Score: int = 0
 
 signal OnScore(score)
 

@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
+[ext_resource type="PackedScene" uid="uid://dceip6uqvb6j2" path="res://GameObjects/Props/horseProp.tscn" id="4_0pwnk"]
 [ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
 [ext_resource type="PackedScene" uid="uid://npbsrhalvqdo" path="res://GameObjects/PlaceholderAsset.tscn" id="5_0pwnk"]
+[ext_resource type="PackedScene" uid="uid://da4rmkrkeds84" path="res://UI/Components/Footer/SaveFooter.tscn" id="6_q56ad"]
 [ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="6_qq275"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
@@ -27,7 +29,7 @@ albedo_color = Color(0, 0.14025977, 0, 1)
 script = ExtResource("4_ye5xf")
 Name = "Thing 1"
 AssetImage = ExtResource("6_qq275")
-Asset = ExtResource("5_0pwnk")
+Asset = ExtResource("4_0pwnk")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_2spav"]
@@ -47,7 +49,7 @@ metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 [node name="DressupMap" type="Node3D" unique_id=772668591]
 
 [node name="DressupCamera" parent="." unique_id=648718780 instance=ExtResource("1_w1bt5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.40668237, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38972014, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=825842716]
 transform = Transform3D(0.8067472, 0.18124612, 0.56241345, -0.56676304, -0.031889994, 0.82326347, 0.16714866, -0.9829206, 0.07699642, 3.3882654, 10.050013, 0.40582454)
@@ -59,7 +61,6 @@ environment = SubResource("Environment_h66jr")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=355926493]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.014174, 0)
-use_collision = true
 radius = 3.519043
 height = 22.029541
 sides = 48
@@ -67,10 +68,37 @@ material = SubResource("StandardMaterial3D_h66jr")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1863907016]
 
-[node name="TabAssetSelector" parent="UI" unique_id=1642857273 instance=ExtResource("3_r8qcy")]
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=1235380660]
+custom_minimum_size = Vector2(0, 30)
 anchors_preset = 12
 anchor_top = 1.0
-offset_top = -211.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -207.0
+grow_horizontal = 2
 grow_vertical = 0
+color = Color(0.11415807, 0.11415809, 0.11415807, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect" unique_id=494467980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TabAssetSelector" parent="UI/ColorRect/VBoxContainer" unique_id=1642857273 instance=ExtResource("3_r8qcy")]
+custom_minimum_size = Vector2(0, 172.12)
+layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 10
 Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResource("Resource_2spav"), SubResource("Resource_q56ad")])
+
+[node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]
