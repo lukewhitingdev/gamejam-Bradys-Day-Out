@@ -1,41 +1,33 @@
-[gd_scene format=3 uid="uid://chyfbsso3y875"]
+[gd_scene format=3 uid="uid://8xlnhnxrxkbu"]
 
 [ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="1_itotx"]
 
-[node name="DressUpGridItem" type="Control" unique_id=1090942604]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="DressUpGridItem" type="AspectRatioContainer" unique_id=2130066261]
+offset_right = 301.0
+offset_bottom = 301.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1516540346]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2063944486]
+layout_mode = 2
+size_flags_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1953994296]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1529995282]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer" unique_id=1619962704]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer" unique_id=2102644320]
 layout_mode = 2
 texture = ExtResource("1_itotx")
 expand_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1560746543]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=285603658]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer" unique_id=207190959]
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer" unique_id=1415877980]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
