@@ -1,5 +1,6 @@
 # How to import horse 
 
+0. Create a new `3D scene`
 1. Right click `horse.fbx` in the file explorer in engine
 2. Right click the `horse` node in the scene and go to the little movie icon `Open in editor`
 3. Go to `pSphere1` or otherwise the `MeshInstance3D`

@@ -3,11 +3,6 @@
 [ext_resource type="Script" uid="uid://038fvp6kakgp" path="res://GameObjects/dressup_camera.gd" id="1_qg2v2"]
 [ext_resource type="PackedScene" uid="uid://1uvcjhnn2kkh" path="res://GameObjects/PlayerHorseMeshCollection.tscn" id="2_msrnv"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_ul1a7"]
-top_radius = 0.0
-bottom_radius = 0.137
-height = 0.2
-
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_qg2v2"]
 
 [node name="DressupCamera" type="Node3D" unique_id=648718780]
@@ -15,8 +10,7 @@ script = ExtResource("1_qg2v2")
 
 [node name="cursorobj" type="MeshInstance3D" parent="." unique_id=1169237213]
 unique_name_in_owner = true
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.6282498, 0)
-mesh = SubResource("CylinderMesh_ul1a7")
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.6282498, 0)
 
 [node name="Horse" parent="." unique_id=1159776203 instance=ExtResource("2_msrnv")]
 unique_name_in_owner = true

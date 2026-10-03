@@ -6,6 +6,9 @@ var bValidPlacingPosition: bool = false;
 
 @onready var AssetSelector: TableAssetSelectorScript = $"../UI/ColorRect/VBoxContainer/TabAssetSelector"
 
+var hasCurrentSelectedAsset = false
+var currentSelectedAsset: Resource
+
 const DegToRad = 0.0174533
 
 # Called when the node enters the scene tree for the first time.
@@ -21,7 +24,14 @@ func _setup_asset_selector_events(OnSelected: Callable):
 
 func _on_asset_changed(data: GridItemData):
 	print_debug("Changed asset to: %s with data: %s" % [data.Name, data.Asset])
+	currentSelectedAsset = data.Asset
+	hasCurrentSelectedAsset = true
 	var node = data.Asset.instantiate()
+	var children = %cursorobj.get_children()
+
+	for child in children:
+		child.queue_free()
+
 	%cursorobj.add_child(node) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -69,8 +79,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.x -= event.relative.y * 0.3 * DegToRad
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
 		
-	if event.is_action_pressed("Left_Click") && bValidPlacingPosition:
-		var scene = load("res://Models/horse.tscn")
+	if event.is_action_pressed("Left_Click") && bValidPlacingPosition && hasCurrentSelectedAsset:
+		var scene = currentSelectedAsset
 		var instance = scene.instantiate()
 		%Horse.add_child(instance)
 		instance.global_position = %cursorobj.global_position
