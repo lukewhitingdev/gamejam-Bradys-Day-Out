@@ -1,6 +1,8 @@
 class_name DressUpGridItem extends AspectRatioContainer
 
 @onready var BackgroundColorRect: ColorRect = $ColorRect
+@onready var ItemImageTex: TextureRect = $VBoxContainer/MarginContainer/TextureRect
+@onready var ItemLabel: RichTextLabel = $VBoxContainer/HBoxContainer/RichTextLabel
 
 # Fired internally when object is selected, ARGS: [0] CurrentObject 
 signal OnSelected
@@ -13,6 +15,11 @@ func _ready() -> void:
 	UnSelect.connect(_on_unslect)
 
 	add_to_group(GroupNames.DressUpItemGroupName)
+
+func set_data(data: GridItemData):
+	ItemImageTex.texture = data.AssetImage
+	ItemLabel.text = data.Name
+	pass
 
 func _on_gui_input(event: InputEvent) -> void:
 	if (event.is_action_pressed("Left_Click")):

@@ -32,6 +32,7 @@ func SetupGrid(res: Resource):
 			itemsToData.set(gridItem, data)
 
 		var gridItemScript = gridItem as DressUpGridItem
+		gridItemScript.set_data(data)
 		gridItems.append(gridItemScript)
 
 	gridScript.bind_events(gridItems)
