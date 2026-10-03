@@ -9,8 +9,8 @@ const DegToRad = 0.0174533
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	TargetRotation = $SpringArm3D.rotation
-	$SpringArm3D.rotation_degrees = Vector3(-89, 0, -60)
+	TargetRotation = %SpringArm3D.rotation
+	%SpringArm3D.rotation_degrees = Vector3(-89, 0, -60)
 
 	_setup_asset_selector_events(_on_asset_changed)
 
@@ -24,11 +24,28 @@ func _on_asset_changed(data: GridItemData):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var CurrentRotQuat: Quaternion = Quaternion.from_euler($SpringArm3D.rotation)
+	var CurrentRotQuat: Quaternion = Quaternion.from_euler(%SpringArm3D.rotation)
 	var TargetRotQuat: Quaternion = Quaternion.from_euler(TargetRotation)
-	$SpringArm3D.rotation = CurrentRotQuat.slerp(TargetRotQuat, (1 - delta) * 0.075).get_euler()
-	$SpringArm3D.rotation.z = 0.0
+	%SpringArm3D.rotation = CurrentRotQuat.slerp(TargetRotQuat, (1 - delta) * 0.075).get_euler()
+	%SpringArm3D.rotation.z = 0.0
+	
+	var MouseTraceStart: Vector3 = %Camera3D.project_ray_origin(get_viewport().get_mouse_position())
+	var MouseTraceEnd: Vector3 = %Camera3D.project_ray_normal(get_viewport().get_mouse_position()) * 100 + %Camera3D.position
+	
+	#%cursorobj.global_position = MouseTraceEnd
+	
+	var params: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.new();
+	params.to = MouseTraceEnd 
+	params.from = MouseTraceStart 
 
+	var result = get_world_3d().direct_space_state.intersect_ray(params)
+	
+	if result:
+		#%cursorobj.rotation = result.normal
+		%cursorobj.look_at_from_position(Vector3(), result.normal)
+		%cursorobj.rotation_degrees.x -= 90
+		%cursorobj.global_position = result.position
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Right_Click"):
 		bMouseLook = true
@@ -42,3 +59,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.y -= event.relative.x * 0.3 * DegToRad
 		TargetRotation.x -= event.relative.y * 0.3 * DegToRad
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
+		
