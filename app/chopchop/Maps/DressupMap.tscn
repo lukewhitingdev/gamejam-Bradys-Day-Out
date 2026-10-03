@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
+[ext_resource type="PackedScene" uid="uid://dceip6uqvb6j2" path="res://GameObjects/Props/horseProp.tscn" id="4_0pwnk"]
 [ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
 [ext_resource type="PackedScene" uid="uid://npbsrhalvqdo" path="res://GameObjects/PlaceholderAsset.tscn" id="5_0pwnk"]
 [ext_resource type="PackedScene" uid="uid://da4rmkrkeds84" path="res://UI/Components/Footer/SaveFooter.tscn" id="6_q56ad"]
@@ -28,7 +29,7 @@ albedo_color = Color(0, 0.14025977, 0, 1)
 script = ExtResource("4_ye5xf")
 Name = "Thing 1"
 AssetImage = ExtResource("6_qq275")
-Asset = ExtResource("5_0pwnk")
+Asset = ExtResource("4_0pwnk")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_2spav"]
