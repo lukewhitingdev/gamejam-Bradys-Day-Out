@@ -3,7 +3,7 @@ extends Node3D
 var bMouseLook: bool = false
 var TargetRotation: Vector3 = Vector3()
 
-@onready var AssetSelector: TableAssetSelectorScript = $"../UI/TabAssetSelector"
+@onready var AssetSelector: TableAssetSelectorScript = $"../UI/VBoxContainer/TabAssetSelector"
 
 const DegToRad = 0.0174533
 
