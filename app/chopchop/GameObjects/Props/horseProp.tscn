@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dceip6uqvb6j2"]
+
+[ext_resource type="Texture2D" uid="uid://d077kou0qmdfk" path="res://Materials/Horse/horse_openPBR_shader1_BaseColor_sRGB.png" id="1_1c42o"]
+[ext_resource type="ArrayMesh" uid="uid://b5kskmrea1wk7" path="res://new_array_mesh.tres" id="2_n8gc6"]
+[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/Horse/horsemat.tres" id="3_njhdh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t20iq"]
+albedo_texture = ExtResource("1_1c42o")
+
+[node name="HorseProp" type="Node3D" unique_id=1084183793]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1765795721]
+transform = Transform3D(-7.712875e-07, 17.645, -7.712875e-07, 0, -7.712875e-07, -17.645, -17.645, -7.712875e-07, 3.3714046e-14, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_t20iq")
+mesh = ExtResource("2_n8gc6")
+surface_material_override/0 = ExtResource("3_njhdh")
