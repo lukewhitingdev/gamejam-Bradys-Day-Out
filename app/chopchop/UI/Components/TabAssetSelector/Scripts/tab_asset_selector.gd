@@ -1,4 +1,6 @@
-extends TabContainer
+class_name TableAssetSelectorScript extends TabContainer
+
+signal OnAssetSelected 
 
 @onready var Grid = $Hats/ScrollContainer/GridContainer
 @export var GridItem: Resource = preload("res://UI/Components/TabAssetSelector/GridItem/DressUpGridItem.tscn");
@@ -7,16 +9,29 @@ extends TabContainer
 
 var gridItems: Array[DressUpGridItem] = []
 
+var itemsToData: Dictionary[AspectRatioContainer, GridItemData] = {}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Grid.OnItemSelected.connect(_on_item_selected)
 	SetupGrid(GridItem)
 	pass # Replace with function body.
 	
+func _on_item_selected(item: DressUpGridItem):
+	var data = itemsToData.get(item)
+	if(data != null):
+		OnAssetSelected.emit(data as GridItemData)
+
 func SetupGrid(res: Resource):
-	for item in Items:
-		var gridScript = Grid as GridContainerScript
+
+	var gridScript = Grid as GridContainerScript
+	for data in Items:
 		var gridItem = gridScript.add_grid_item(res)
 
-		gridItems.append(gridItem as DressUpGridItem)
+		if(itemsToData.get(gridItem) == null):
+			itemsToData.set(gridItem, data)
 
-		gridScript.bind_events(gridItems)
+		var gridItemScript = gridItem as DressUpGridItem
+		gridItems.append(gridItemScript)
+
+	gridScript.bind_events(gridItems)

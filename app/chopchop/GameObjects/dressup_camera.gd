@@ -3,12 +3,24 @@ extends Node3D
 var bMouseLook: bool = false
 var TargetRotation: Vector3 = Vector3()
 
+@onready var AssetSelector: TableAssetSelectorScript = $"../UI/TabAssetSelector"
+
 const DegToRad = 0.0174533
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	TargetRotation = $SpringArm3D.rotation
 	$SpringArm3D.rotation_degrees = Vector3(-89, 0, -60)
+
+	_setup_asset_selector_events(_on_asset_changed)
+
+func _setup_asset_selector_events(OnSelected: Callable):
+	var script = AssetSelector as TableAssetSelectorScript
+	script.OnAssetSelected.connect(OnSelected)
+
+func _on_asset_changed(data: GridItemData):
+	print(data.Name)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

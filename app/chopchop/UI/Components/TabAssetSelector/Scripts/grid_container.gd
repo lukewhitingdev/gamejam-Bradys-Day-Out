@@ -3,6 +3,8 @@ class_name GridContainerScript extends GridContainer
 var hasItemSelected = false
 var currentSelectedItem: DressUpGridItem
 
+signal OnItemSelected
+
 var GridItemMinSize = Vector2(100, 100)
 
 # Called when the node enters the scene tree for the first time.
@@ -24,8 +26,12 @@ func CreateGridItem(res: Resource) -> AspectRatioContainer:
 	return node as AspectRatioContainer
 
 func _on_item_selected(item: DressUpGridItem):
-	if(hasItemSelected && item != currentSelectedItem):
+	var bItemIsCurrentlySelected = item == currentSelectedItem
+
+	if(hasItemSelected && !bItemIsCurrentlySelected):
 		currentSelectedItem._on_unslect()
 
 	currentSelectedItem = item
 	hasItemSelected = true
+
+	OnItemSelected.emit(item)
