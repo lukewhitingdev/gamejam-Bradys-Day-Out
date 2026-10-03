@@ -2,6 +2,7 @@ extends Node3D
 
 var bMouseLook: bool = false
 var TargetRotation: Vector3 = Vector3()
+var bValidPlacingPosition: bool = false;
 
 @onready var AssetSelector: TableAssetSelectorScript = $"../UI/VBoxContainer/TabAssetSelector"
 
@@ -30,22 +31,28 @@ func _process(delta: float) -> void:
 	%SpringArm3D.rotation = CurrentRotQuat.slerp(TargetRotQuat, (1 - delta) * 0.075).get_euler()
 	%SpringArm3D.rotation.z = 0.0
 	
-	var MouseTraceStart: Vector3 = %Camera3D.project_ray_origin(get_viewport().get_mouse_position())
-	var MouseTraceEnd: Vector3 = %Camera3D.project_ray_normal(get_viewport().get_mouse_position()) * 100 + %Camera3D.position
-	
-	#%cursorobj.global_position = MouseTraceEnd
-	
-	var params: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.new();
-	params.to = MouseTraceEnd 
-	params.from = MouseTraceStart 
+	if(!bMouseLook):
+		var MouseTraceStart: Vector3 = %Camera3D.project_ray_origin(get_viewport().get_mouse_position())
+		var MouseNormal: Vector3 = %Camera3D.project_ray_normal(get_viewport().get_mouse_position())
+		var MouseTraceEnd: Vector3 = MouseNormal * 100 + %Camera3D.global_position
+		
+		var params: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.new();
+		params.to = MouseTraceEnd 
+		params.from = MouseTraceStart 
 
-	var result = get_world_3d().direct_space_state.intersect_ray(params)
-	
-	if result:
-		#%cursorobj.rotation = result.normal
-		%cursorobj.look_at_from_position(Vector3(), result.normal)
-		%cursorobj.rotation_degrees.x -= 90
-		%cursorobj.global_position = result.position
+		var result = get_world_3d().direct_space_state.intersect_ray(params)
+		
+		bValidPlacingPosition = !(result as Dictionary).is_empty()
+		
+		if bValidPlacingPosition:
+			%cursorobj.look_at_from_position(Vector3(), result.normal)
+			%cursorobj.rotation_degrees.x -= 90
+			%cursorobj.global_position = result.position
+		else:
+			%cursorobj.rotation_degrees = Vector3(0, 0, 0)
+			%cursorobj.global_position = MouseNormal * 3 + %Camera3D.global_position
+			
+	%cursorobj.visible = !bMouseLook
 
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -61,4 +68,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.y -= event.relative.x * 0.3 * DegToRad
 		TargetRotation.x -= event.relative.y * 0.3 * DegToRad
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
+		
+	if event.is_action_pressed("Left_Click") && bValidPlacingPosition:
+		var scene = load("res://Models/horse.tscn")
+		var instance = scene.instantiate()
+		%Horse.add_child(instance)
+		instance.global_position = %cursorobj.global_position
+		instance.global_rotation = %cursorobj.global_rotation
+		instance.scale *= 4
 		
