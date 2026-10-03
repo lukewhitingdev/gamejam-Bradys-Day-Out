@@ -1,6 +1,6 @@
 extends Node3D
 
-var my_body_array = [$StaticBody3D2,$StaticBody3D4,$StaticBody3D5,$StaticBody3D3,$StaticBody3D]
+var my_body_array = []
 @export var Score = 0
 
 signal OnScore(score)
