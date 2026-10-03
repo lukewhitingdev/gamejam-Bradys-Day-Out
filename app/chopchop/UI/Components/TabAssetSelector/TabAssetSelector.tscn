@@ -28,6 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
+tabs_position = 1
 script = ExtResource("1_djv4d")
 Items = Array[ExtResource("2_hiclj")]([SubResource("Resource_d3pcb"), SubResource("Resource_joo38")])
 
@@ -54,3 +55,5 @@ script = ExtResource("6_hiclj")
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

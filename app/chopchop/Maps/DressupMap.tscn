@@ -67,23 +67,37 @@ material = SubResource("StandardMaterial3D_h66jr")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1863907016]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=494467980]
+[node name="ColorRect" type="ColorRect" parent="UI" unique_id=1235380660]
+custom_minimum_size = Vector2(0, 30)
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -135.0
+offset_top = -207.0
 grow_horizontal = 2
 grow_vertical = 0
+color = Color(0.11415807, 0.11415809, 0.11415807, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect" unique_id=494467980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="TabAssetSelector" parent="UI/VBoxContainer" unique_id=1642857273 instance=ExtResource("3_r8qcy")]
-custom_minimum_size = Vector2(0, 200)
+[node name="TabAssetSelector" parent="UI/ColorRect/VBoxContainer" unique_id=1642857273 instance=ExtResource("3_r8qcy")]
+custom_minimum_size = Vector2(0, 172.12)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 10
 Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResource("Resource_2spav"), SubResource("Resource_q56ad")])
 
-[node name="SaveFooter" parent="UI/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
+[node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
+
+[connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
+[connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]

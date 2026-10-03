@@ -4,7 +4,7 @@ var bMouseLook: bool = false
 var TargetRotation: Vector3 = Vector3()
 var bValidPlacingPosition: bool = false;
 
-@onready var AssetSelector: TableAssetSelectorScript = $"../UI/VBoxContainer/TabAssetSelector"
+@onready var AssetSelector: TableAssetSelectorScript = $"../UI/ColorRect/VBoxContainer/TabAssetSelector"
 
 const DegToRad = 0.0174533
 
