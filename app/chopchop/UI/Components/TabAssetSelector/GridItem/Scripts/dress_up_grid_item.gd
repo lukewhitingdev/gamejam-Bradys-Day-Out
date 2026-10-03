@@ -16,7 +16,6 @@ func _ready() -> void:
 
 func _on_gui_input(event: InputEvent) -> void:
 	if (event.is_action_pressed("Left_Click")):
-		print("Fire")
 		OnSelected.emit(self as DressUpGridItem)
 		
 func _on_unslect():
