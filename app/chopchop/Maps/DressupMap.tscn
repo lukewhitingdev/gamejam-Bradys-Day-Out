@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
 [ext_resource type="PackedScene" uid="uid://ocq4ucai3hpf" path="res://GameObjects/PlayerHorse.tscn" id="2_uuv2p"]
+[ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
 
@@ -41,3 +42,12 @@ radius = 3.519043
 height = 22.029541
 sides = 48
 material = SubResource("StandardMaterial3D_h66jr")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1863907016]
+
+[node name="TabAssetSelector" parent="UI" unique_id=1642857273 instance=ExtResource("3_r8qcy")]
+anchors_preset = 12
+anchor_top = 1.0
+offset_top = -211.0
+grow_vertical = 0
+size_flags_horizontal = 3
