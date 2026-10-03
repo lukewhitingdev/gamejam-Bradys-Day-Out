@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dceip6uqvb6j2"]
 
 [ext_resource type="Texture2D" uid="uid://d077kou0qmdfk" path="res://Materials/Horse/horse_openPBR_shader1_BaseColor_sRGB.png" id="1_1c42o"]
-[ext_resource type="ArrayMesh" uid="uid://b5kskmrea1wk7" path="res://new_array_mesh.tres" id="2_n8gc6"]
+[ext_resource type="ArrayMesh" uid="uid://b5kskmrea1wk7" path="res://Assets/Meshes/horse_mesh.tres" id="2_n8gc6"]
 [ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/Horse/horsemat.tres" id="3_njhdh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t20iq"]

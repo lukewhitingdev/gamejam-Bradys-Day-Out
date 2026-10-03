@@ -1,4 +1,4 @@
-extends RigidBody3D
+class_name PlinkoHorseScript extends RigidBody3D
 
 var HasGameStarted = false
 

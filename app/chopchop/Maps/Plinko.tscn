@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c0tyqs6ircmle"]
 
+[ext_resource type="Script" uid="uid://dohnj7mg00sib" path="res://Maps/plinko_gamemode.gd" id="1_vimka"]
 [ext_resource type="PackedScene" uid="uid://d0encbuxgii3l" path="res://GameObjects/PlinkoHorse.tscn" id="2_vimka"]
 [ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="2_xcrvh"]
 
@@ -10,6 +11,7 @@
 [sub_resource type="Compositor" id="Compositor_b1lj4"]
 
 [node name="Plinko" type="Node3D" unique_id=178533814]
+script = ExtResource("1_vimka")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=371456973]
 transform = Transform3D(2.6033509e-15, -2.171365e-07, -1.5031474, -1.362522, -2.171365e-07, 0, -5.955773e-08, 4.967503, -6.5704654e-08, 2.0687084, 3.749617, -0.025646687)
@@ -192,7 +194,7 @@ transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 5.7732267, -5
 use_collision = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
-transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.510983, -5.103783, 2.1967869)
+transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.452592, -5.074761, 2.1946297)
 use_collision = true
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1294853535]
@@ -225,5 +227,8 @@ Score = 5
 
 [node name="PlinkoHorse" parent="." unique_id=623002710 instance=ExtResource("2_vimka")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2030816, 21.900288, 0.6655054)
-Gravity = 0.5
+Gravity = 50.0
 BeginCameraPosition = Vector3(6, 15, 20)
+
+[node name="HorseSpawn" type="Marker3D" parent="." unique_id=1212244627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2748804, 22.1673, 0)
