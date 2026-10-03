@@ -19,8 +19,9 @@ func _setup_asset_selector_events(OnSelected: Callable):
 	script.OnAssetSelected.connect(OnSelected)
 
 func _on_asset_changed(data: GridItemData):
-	print(data.Name)
-
+	print_debug("Changed asset to: %s with data: %s" % [data.Name, data.Asset])
+	var cursor:MeshInstance3D = %cursorobj as MeshInstance3D
+	cursor.mesh = data.Asset
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -45,6 +46,7 @@ func _process(delta: float) -> void:
 		%cursorobj.look_at_from_position(Vector3(), result.normal)
 		%cursorobj.rotation_degrees.x -= 90
 		%cursorobj.global_position = result.position
+
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Right_Click"):
