@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://da4rmkrkeds84"]
 
-[ext_resource type="Script" uid="uid://b7lpsxll2yxqj" path="res://UI/Components/SaveFooterVersionGenerator.gd" id="1_cm3yt"]
+[ext_resource type="Script" uid="uid://b7lpsxll2yxqj" path="res://UI/Components/Footer/Script/SaveFooterVersionGenerator.gd" id="1_cm3yt"]
 
 [node name="SaveFooter" type="HBoxContainer" unique_id=610904564]
 anchors_preset = 12

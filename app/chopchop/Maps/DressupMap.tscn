@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
 [ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
 [ext_resource type="PackedScene" uid="uid://npbsrhalvqdo" path="res://GameObjects/PlaceholderAsset.tscn" id="5_0pwnk"]
-[ext_resource type="PackedScene" uid="uid://da4rmkrkeds84" path="res://UI/Components/SaveFooter.tscn" id="6_q56ad"]
+[ext_resource type="PackedScene" uid="uid://da4rmkrkeds84" path="res://UI/Components/Footer/SaveFooter.tscn" id="6_q56ad"]
 [ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="6_qq275"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
@@ -88,4 +88,3 @@ Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResourc
 [node name="SaveFooter" parent="UI/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-size_flags_vertical = 10
