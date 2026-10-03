@@ -21,8 +21,8 @@ func _setup_asset_selector_events(OnSelected: Callable):
 
 func _on_asset_changed(data: GridItemData):
 	print_debug("Changed asset to: %s with data: %s" % [data.Name, data.Asset])
-	var cursor:MeshInstance3D = %cursorobj as MeshInstance3D
-	cursor.mesh = data.Asset
+	var node = data.Asset.instantiate()
+	%cursorobj.add_child(node) 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
