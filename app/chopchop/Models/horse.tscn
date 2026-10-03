@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cbhx8i1ra5v3h"]
+
+[ext_resource type="PackedScene" uid="uid://h8ih6btjqpfd" path="res://Models/horse.fbx" id="1_o05di"]
+[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/horsemat.tres" id="2_20i4d"]
+
+[node name="horse" unique_id=1785070167 instance=ExtResource("1_o05di")]
+
+[node name="pSphere1" parent="." index="0" unique_id=653161230]
+surface_material_override/0 = ExtResource("2_20i4d")

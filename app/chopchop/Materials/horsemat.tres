@@ -1,3 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ccu0hmp6f6vcg"]
 
+[ext_resource type="Texture2D" uid="uid://d077kou0qmdfk" path="res://Materials/horse_openPBR_shader1_BaseColor_sRGB.png" id="1_6mwr6"]
+
 [resource]
+albedo_texture = ExtResource("1_6mwr6")
