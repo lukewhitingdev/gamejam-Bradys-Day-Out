@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d077kou0qmdfk"
-path.s3tc="res://.godot/imported/horse_openPBR_shader1_BaseColor_sRGB.png-beb1338d0a12e973a8f281a6a9947e6e.s3tc.ctex"
+uid="uid://d3362ekvqbndl"
+path.s3tc="res://.godot/imported/tanhorsebase.png-27f417a3afb6f88aa23589d1e11d5dc1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Materials/horse_openPBR_shader1_BaseColor_sRGB.png"
-dest_files=["res://.godot/imported/horse_openPBR_shader1_BaseColor_sRGB.png-beb1338d0a12e973a8f281a6a9947e6e.s3tc.ctex"]
+source_file="res://Materials/Horse/tanhorsebase.png"
+dest_files=["res://.godot/imported/tanhorsebase.png-27f417a3afb6f88aa23589d1e11d5dc1.s3tc.ctex"]
 
 [params]
 

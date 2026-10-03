@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://3mhi6vechsl8"]
 
 [ext_resource type="PackedScene" uid="uid://ld10s1rtvfof" path="res://UI/MainMenuCanvas.tscn" id="1_54vni"]
+[ext_resource type="PackedScene" uid="uid://h8ih6btjqpfd" path="res://Models/horse.fbx" id="2_2gj0u"]
 
 [node name="MainMenuMap" type="Node3D" unique_id=1474193702]
 
 [node name="MainMenuCanvas" parent="." unique_id=744911691 instance=ExtResource("1_54vni")]
+
+[node name="horse" parent="." unique_id=602755085 instance=ExtResource("2_2gj0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18329906, 0, 0.5196078)
