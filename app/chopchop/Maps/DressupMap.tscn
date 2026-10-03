@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://coabh5afe2ut4"]
+
+[ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
+[ext_resource type="PackedScene" uid="uid://ocq4ucai3hpf" path="res://GameObjects/PlayerHorse.tscn" id="2_uuv2p"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
+
+[sub_resource type="Sky" id="Sky_r8qcy"]
+sky_material = SubResource("ProceduralSkyMaterial_7dwbp")
+
+[sub_resource type="Environment" id="Environment_h66jr"]
+background_mode = 2
+sky = SubResource("Sky_r8qcy")
+ambient_light_source = 3
+ambient_light_color = Color(0.8862745, 0.58431375, 0.64705884, 1)
+fog_light_color = Color(0.5807576, 0.5807576, 0.5807576, 1)
+fog_sky_affect = 0.0
+fog_height_density = 3.1386
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h66jr"]
+
+[node name="DressupMap" type="Node3D" unique_id=772668591]
+
+[node name="DressupCamera" parent="." unique_id=648718780 instance=ExtResource("1_w1bt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49659622, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1223098705]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10.807005, 0)
+spot_range = 21.871
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=197145423]
+environment = SubResource("Environment_h66jr")
+
+[node name="PlayerHorse" parent="." unique_id=623002710 instance=ExtResource("2_uuv2p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.854, 0)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=355926493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.014174, 0)
+use_collision = true
+radius = 3.519043
+height = 22.029541
+sides = 48
+material = SubResource("StandardMaterial3D_h66jr")

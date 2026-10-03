@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://duaaacuu27dlc"]
+
+[ext_resource type="Script" uid="uid://038fvp6kakgp" path="res://GameObjects/dressup_camera.gd" id="1_qg2v2"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_qg2v2"]
+
+[node name="DressupCamera" type="Node3D" unique_id=648718780]
+script = ExtResource("1_qg2v2")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=116033882]
+unique_name_in_owner = true
+transform = Transform3D(0.62983805, -0.40444073, 0.66312265, 0, 0.85374033, 0.520699, -0.7767265, -0.32795605, 0.5377182, 0, 0, 0)
+shape = SubResource("SeparationRayShape3D_qg2v2")
+spring_length = 5.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1884087055]
+fov = 60.0
