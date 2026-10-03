@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://npbsrhalvqdo" path="res://GameObjects/PlaceholderAsset.tscn" id="3_q46mx"]
 [ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="4_kvqw7"]
 [ext_resource type="Texture2D" uid="uid://bgm00e2j5geyo" path="res://icon.svg" id="5_foew5"]
+[ext_resource type="Script" uid="uid://cktdeeg823p4i" path="res://UI/Components/TabAssetSelector/Scripts/grid_container.gd" id="6_hiclj"]
 
 [sub_resource type="Resource" id="Resource_d3pcb"]
 script = ExtResource("2_hiclj")
@@ -47,6 +48,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 6
+script = ExtResource("6_hiclj")
 
 [node name="Other" type="Label" parent="." unique_id=1738877960]
 visible = false

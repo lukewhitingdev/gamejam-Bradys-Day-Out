@@ -1,15 +1,21 @@
 [gd_scene format=3 uid="uid://ocq4ucai3hpf"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ghb63"]
-size = Vector3(0.6503906, 1.281, 2.063)
+[ext_resource type="Texture2D" uid="uid://d077kou0qmdfk" path="res://Materials/horse_openPBR_shader1_BaseColor_sRGB.png" id="1_m0b2i"]
+[ext_resource type="ArrayMesh" uid="uid://b5kskmrea1wk7" path="res://new_array_mesh.tres" id="2_m5kbx"]
+[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/horsemat.tres" id="3_r70iu"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_h66jr"]
-size = Vector3(0.6525879, 1.2810059, 2.0625)
+[sub_resource type="SphereShape3D" id="SphereShape3D_m0b2i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tly1y"]
+albedo_texture = ExtResource("1_m0b2i")
 
 [node name="PlayerHorse" type="RigidBody3D" unique_id=623002710]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1725602663]
-shape = SubResource("BoxShape3D_ghb63")
+shape = SubResource("SphereShape3D_m0b2i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1406706126]
-mesh = SubResource("BoxMesh_h66jr")
+transform = Transform3D(-7.712875e-07, 17.645, -7.712875e-07, 0, -7.712875e-07, -17.645, -17.645, -7.712875e-07, 3.3714046e-14, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_tly1y")
+mesh = ExtResource("2_m5kbx")
+surface_material_override/0 = ExtResource("3_r70iu")

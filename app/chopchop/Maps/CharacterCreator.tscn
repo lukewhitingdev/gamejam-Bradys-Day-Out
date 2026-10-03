@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dl3i7qwduo2qp"]
+
+[ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="1_drytg"]
+
+[node name="CharacterCreator" type="Node3D" unique_id=331614774]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1571464658]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1223367156]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -223.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="AssetSelector" parent="CanvasLayer/PanelContainer" unique_id=1642857273 instance=ExtResource("1_drytg")]
+layout_mode = 2

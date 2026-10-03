@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
 [ext_resource type="PackedScene" uid="uid://ocq4ucai3hpf" path="res://GameObjects/PlayerHorse.tscn" id="2_uuv2p"]
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
+[ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
+[ext_resource type="PackedScene" uid="uid://npbsrhalvqdo" path="res://GameObjects/PlaceholderAsset.tscn" id="5_0pwnk"]
+[ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="6_qq275"]
+[ext_resource type="Texture2D" uid="uid://bgm00e2j5geyo" path="res://icon.svg" id="7_6jmne"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
 
@@ -19,6 +23,27 @@ fog_sky_affect = 0.0
 fog_height_density = 3.1386
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h66jr"]
+
+[sub_resource type="Resource" id="Resource_d3pcb"]
+script = ExtResource("4_ye5xf")
+Name = "Thing 1"
+AssetImage = ExtResource("6_qq275")
+Asset = ExtResource("5_0pwnk")
+metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
+
+[sub_resource type="Resource" id="Resource_joo38"]
+script = ExtResource("4_ye5xf")
+Name = "Thing2"
+AssetImage = ExtResource("7_6jmne")
+Asset = ExtResource("5_0pwnk")
+metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
+
+[sub_resource type="Resource" id="Resource_eai1f"]
+script = ExtResource("4_ye5xf")
+Name = "Shitfuck123"
+AssetImage = ExtResource("7_6jmne")
+Asset = ExtResource("5_0pwnk")
+metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [node name="DressupMap" type="Node3D" unique_id=772668591]
 
@@ -52,3 +77,4 @@ anchor_top = 1.0
 offset_top = -211.0
 grow_vertical = 0
 size_flags_horizontal = 3
+Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResource("Resource_joo38"), SubResource("Resource_eai1f")])
