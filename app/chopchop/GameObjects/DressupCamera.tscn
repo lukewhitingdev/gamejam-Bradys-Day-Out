@@ -11,7 +11,7 @@ script = ExtResource("1_qg2v2")
 unique_name_in_owner = true
 transform = Transform3D(0.62983805, -0.40444073, 0.66312265, 0, 0.85374033, 0.520699, -0.7767265, -0.32795605, 0.5377182, 0, 0, 0)
 shape = SubResource("SeparationRayShape3D_qg2v2")
-spring_length = 10.0
+spring_length = 5.0
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1884087055]
 fov = 60.0

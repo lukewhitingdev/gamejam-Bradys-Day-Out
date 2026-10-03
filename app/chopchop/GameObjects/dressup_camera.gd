@@ -22,4 +22,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion && bMouseLook:
 		$SpringArm3D.rotation_degrees.y -= event.relative.x * 0.1
 		$SpringArm3D.rotation_degrees.x -= event.relative.y * 0.1
-		$SpringArm3D.rotation_degrees.x = clamp($SpringArm3D.rotation_degrees.x, -89, 89)
+		$SpringArm3D.rotation_degrees.x = clamp($SpringArm3D.rotation_degrees.x, -89, 2)
