@@ -25,9 +25,10 @@ fog_height_density = 3.1386
 [node name="DressupCamera" parent="." unique_id=648718780 instance=ExtResource("1_w1bt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49659622, 0)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1223098705]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 10.807005, 0)
-spot_range = 21.871
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=825842716]
+transform = Transform3D(0.8067472, 0.18124612, 0.56241345, -0.56676304, -0.031889994, 0.82326347, 0.16714866, -0.9829206, 0.07699642, 3.3882654, 10.050013, 0.40582454)
+shadow_enabled = true
+shadow_bias = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=197145423]
 environment = SubResource("Environment_h66jr")

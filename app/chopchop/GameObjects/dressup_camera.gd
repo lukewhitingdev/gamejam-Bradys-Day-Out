@@ -20,6 +20,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	if event is InputEventMouseMotion && bMouseLook:
-		$SpringArm3D.rotation_degrees.y -= event.relative.x * 0.1
-		$SpringArm3D.rotation_degrees.x -= event.relative.y * 0.1
+		$SpringArm3D.rotation_degrees.y -= event.relative.x * 0.3
+		$SpringArm3D.rotation_degrees.x -= event.relative.y * 0.3
 		$SpringArm3D.rotation_degrees.x = clamp($SpringArm3D.rotation_degrees.x, -89, 2)
