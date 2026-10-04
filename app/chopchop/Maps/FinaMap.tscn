@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://inahlyobeq4y"]
+
+[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/Horse/horsemat.tres" id="1_ivy0d"]
+
+[node name="FinaMap" type="Node3D" unique_id=459672555]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=187705641]
+transform = Transform3D(1, 0, 0, 0, 0.7154609, 0.69865274, 0, -0.69865274, 0.7154609, 0, 2.4140344, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1909743767]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+material = ExtResource("1_ivy0d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=190641614]
+root_node = NodePath("../CSGBox3D")
