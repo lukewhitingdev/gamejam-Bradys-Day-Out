@@ -29,9 +29,6 @@ window/stretch/mode="viewport"
 [global_group]
 
 HorseGroup=""
-[dotnet]
-
-project/assembly_name="chopchop"
 
 [input]
 
