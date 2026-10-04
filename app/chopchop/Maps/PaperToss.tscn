@@ -40,6 +40,7 @@ BeginCameraPosition = Vector3(0, 0, 10)
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("1_ar6bx")]
 transform = Transform3D(3.020395, 0, 0, 0, 1.6453232, 0, 0, 0, 2.2561955, 5.4685464, -4.578881, -1.2807341)
+Score = 1
 
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
 transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.2672424, -5.579458, -2.1354332)

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b22285vhlknfj"]
+[gd_scene format=3 uid="uid://bhsbwph2nr33v"]
 
-[ext_resource type="Script" uid="uid://f8bq5kro1cnc" path="res://UI/plinko_finished_ui.gd" id="1_tglx0"]
+[ext_resource type="Script" uid="uid://dovmr263g413g" path="res://UI/paper_toss_finished_ui.gd" id="1_5rjhu"]
 
 [node name="Control" type="Control" unique_id=1092030268]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tglx0")
+script = ExtResource("1_5rjhu")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=3834720]
 layout_mode = 1
