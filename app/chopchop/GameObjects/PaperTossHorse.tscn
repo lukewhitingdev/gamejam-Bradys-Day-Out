@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://et2a6aigsvui" path="res://GameObjects/paper_toss_horse.gd" id="1_verj2"]
 [ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="2_4axhr"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="3_4axhr"]
+[ext_resource type="AudioStream" uid="uid://dgpgc1pq6oh2t" path="res://Audio/throw sound.wav" id="4_dy2ci"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xcrvh"]
 
@@ -23,3 +24,6 @@ top_level = true
 
 [node name="BeginCam" type="Camera3D" parent="." unique_id=733122560]
 top_level = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1930168715]
+stream = ExtResource("4_dy2ci")
