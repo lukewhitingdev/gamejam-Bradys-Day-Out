@@ -6,7 +6,4 @@ func on_firing(velo: Vector2, normDir: Vector2):
 	var powerPerc = remap(min(velo.length(), maxVelo), 0, maxVelo, 0, 100)
 
 	self.value = powerPerc
-
-	print(powerPerc)
-	print(normDir)
 	pass
