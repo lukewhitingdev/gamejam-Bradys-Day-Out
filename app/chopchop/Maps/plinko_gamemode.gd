@@ -22,7 +22,7 @@ func _setup_events(items: Array[PlinkoCup]):
 func _on_plinko_scored(score: int):
 	print("Updated score to %s" % [score])
 	total_score += score
-
+	await get_tree().create_timer(1.5).timeout
 	_reset_horse()
 
 func _reset_horse():

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bfvpc7bvnn5g4" path="res://GameObjects/PaperTossHorse.tscn" id="1_4g1hd"]
 [ext_resource type="Script" uid="uid://d016f84uksni7" path="res://Maps/paper_toss.gd" id="1_a5irk"]
 [ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="1_ar6bx"]
+[ext_resource type="PackedScene" uid="uid://c8m6ofnemq81q" path="res://GameObjects/paper_toss_reset.tscn" id="4_imv7t"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 
@@ -20,10 +21,6 @@ compositor = SubResource("Compositor_b1lj4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=841031461]
 transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 15.150552, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=645152459]
-transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 5.7732267, -5.103783, 2.1967869)
-use_collision = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
 transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.510983, -5.103783, 2.1967869)
@@ -43,3 +40,6 @@ BeginCameraPosition = Vector3(0, 0, 10)
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("1_ar6bx")]
 transform = Transform3D(3.020395, 0, 0, 0, 1.6453232, 0, 0, 0, 2.2561955, 5.4685464, -4.578881, -1.2807341)
+
+[node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
+transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.2672424, -5.579458, -2.1354332)

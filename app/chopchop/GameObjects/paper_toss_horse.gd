@@ -14,7 +14,6 @@ func _ready() -> void:
 	var BeginCamera = $BeginCam
 	BeginCamera.position = BeginCameraPosition
 	BeginCamera.make_current()
-	print("Player Ready")
 	OriginalPosition = position
 	OriginalRotation = rotation
 	gravity_scale = 0.0
@@ -25,7 +24,6 @@ func _input(event: InputEvent) -> void:
 			if event.is_action_released("Left_Click"):
 				ShouldFire = true
 			elif event is InputEventMouseMotion && ShouldFire:
-				print("velocity = ", event.velocity)
 				ShouldFire = false
 				CanFire = false
 				gravity_scale = 1.0
@@ -33,14 +31,12 @@ func _input(event: InputEvent) -> void:
 				var length = Velocity.length() * 0.01
 				var Direction = Velocity.normalized()
 				var Impulse = Vector3(Direction.x, -Direction.y, -1) * length;
-				print("Direction = ", Direction, " Length = ", length, " Impulse = ", Impulse)
 				apply_impulse(Impulse)
 	if event.is_action_pressed("start_game"):
 		_reset()
 
 func _reset():
 	CanFire = true
-	print("OriginalPosition = ", OriginalPosition, " OriginalRotation = ", OriginalRotation)
 	gravity_scale = 0.0
 	angular_velocity = Vector3.ZERO
 	set_linear_velocity(Vector3.ZERO)

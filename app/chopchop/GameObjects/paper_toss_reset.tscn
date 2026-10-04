@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c8m6ofnemq81q"]
+
+[ext_resource type="Script" uid="uid://sm8otpllua5x" path="res://GameObjects/paper_toss_reset.gd" id="1_flg0s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_13qdw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_b1lj4"]
+
+[node name="PaperTossReset" type="Node3D" unique_id=997878136]
+script = ExtResource("1_flg0s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2111927913]
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D" unique_id=267786474]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D" unique_id=1825199256]
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/Area3D/CollisionShape3D" unique_id=673859755]
+mesh = SubResource("BoxMesh_13qdw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=720886910]
+shape = SubResource("BoxShape3D_13qdw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1844694936]
+mesh = SubResource("BoxMesh_b1lj4")
