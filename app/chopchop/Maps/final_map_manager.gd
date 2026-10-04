@@ -5,7 +5,7 @@ extends Node3D
 @onready var vineBoomPlayer: AudioStreamPlayer = $VineBoomPlayer
 @onready var celebrationPlayer: AudioStreamPlayer = $CelebrationPlayer
 
-@onready var celebrationUI: PanelContainer = $UI/PanelContainer
+@onready var celebrationUI: Control = $UI/Control
 
 @export var lookAtTarget: Node3D
 @export var transitionLerp: float = 1
