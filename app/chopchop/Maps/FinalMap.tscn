@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://7sncltn6qthe" path="res://Audio/Victory sound 3.wav" id="4_iqajh"]
 [ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="5_f8hj6"]
 [ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="6_ia83l"]
+[ext_resource type="Script" uid="uid://bnbekol7giqqt" path="res://UI/exit_button.gd" id="6_lofwt"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="7_sf5he"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itnuj"]
@@ -84,25 +85,28 @@ volume_db = -8.618
 
 [node name="VineBoomPlayer" type="AudioStreamPlayer" parent="." unique_id=968530500]
 stream = ExtResource("5_f8hj6")
-volume_db = -80.0
+volume_db = -33.475
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1727545296]
 
-[node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1495151689]
+[node name="Control" type="Control" parent="UI" unique_id=1180333026]
 visible = false
-custom_minimum_size = Vector2(0, 100)
-anchors_preset = 10
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 139.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control" unique_id=272872079]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 125.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
-mouse_filter = 1
+size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer" unique_id=272872079]
-layout_mode = 2
-
-[node name="ScoreLabel" type="RichTextLabel" parent="UI/PanelContainer/VBoxContainer" unique_id=1268958690]
+[node name="ScoreLabel" type="RichTextLabel" parent="UI/Control/VBoxContainer" unique_id=1268958690]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 42
@@ -111,7 +115,7 @@ text = "[wave] [rainbow] You Win"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/PanelContainer/VBoxContainer" unique_id=869348344]
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Control/VBoxContainer" unique_id=869348344]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 42
@@ -120,8 +124,35 @@ text = "Score: [tornado] 123"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control" unique_id=1143741533]
+custom_minimum_size = Vector2(108.925, 20)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control/HBoxContainer" unique_id=401805609]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="UI/Control/HBoxContainer/MarginContainer" unique_id=1087870661]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Exit"
+script = ExtResource("6_lofwt")
+
 [node name="PlayerHorse" parent="." unique_id=1785070167 instance=ExtResource("6_ia83l")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 1.4685198, 0)
 script = ExtResource("7_sf5he")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="gui_input" from="UI/Control/HBoxContainer/MarginContainer/Button" to="UI/Control/HBoxContainer/MarginContainer/Button" method="_on_gui_input"]
