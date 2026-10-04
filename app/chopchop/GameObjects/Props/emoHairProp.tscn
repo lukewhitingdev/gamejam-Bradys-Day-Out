@@ -6,6 +6,5 @@
 [node name="EmoHairProp" type="Node3D" unique_id=836817645]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=881360785]
-transform = Transform3D(19.80393, 0, -42.85625, 0, 16.635, 0, 33.31879, 0, 25.47278, 0, 0, 0)
 mesh = ExtResource("1_qygxd")
 surface_material_override/0 = ExtResource("2_ejvco")

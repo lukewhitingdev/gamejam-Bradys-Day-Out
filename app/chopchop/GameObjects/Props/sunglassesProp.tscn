@@ -6,6 +6,5 @@
 [node name="SunglassesProp" type="Node3D" unique_id=996474832]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1504652874]
-transform = Transform3D(20, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 mesh = ExtResource("1_dpi03")
 surface_material_override/0 = ExtResource("2_4tfx3")

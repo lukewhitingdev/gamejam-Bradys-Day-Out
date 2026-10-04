@@ -6,6 +6,5 @@
 [node name="AngelWingProp" type="Node3D" unique_id=1933979478]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=216369725]
-transform = Transform3D(0.48432264, 2.4844773, 0, -0.124223866, 9.686453, 0, 0, 0, 0.2, 0.0023385733, 0, 0)
 mesh = ExtResource("1_no11o")
 surface_material_override/0 = ExtResource("2_4ajqn")

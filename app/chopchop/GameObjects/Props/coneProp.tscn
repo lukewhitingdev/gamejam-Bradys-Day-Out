@@ -6,6 +6,5 @@
 [node name="ConeProp" type="Node3D" unique_id=1041510978]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=873093224]
-transform = Transform3D(50, 0, 0, 0, 8, 0, 0, 0, 50, 0, 0, 0)
 mesh = ExtResource("1_mimcd")
 surface_material_override/0 = ExtResource("2_uamrf")
