@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://of7wa2x2oi8" path="res://GameObjects/Environment/wateringcan.tscn" id="8_1pxqc"]
 [ext_resource type="PackedScene" uid="uid://cfeca33rkglhh" path="res://GameObjects/Environment/chair.tscn" id="9_7dw8v"]
 [ext_resource type="PackedScene" uid="uid://dfc55gmhp2c3v" path="res://GameObjects/Environment/fan.tscn" id="10_fjkhj"]
+[ext_resource type="AudioStream" uid="uid://blk8sa115wtbl" path="res://Audio/dressup loop.wav" id="11_1pxqc"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 
@@ -179,3 +180,8 @@ transform = Transform3D(0.120420024, 0, -0.59289455, 0, 0.60499996, 0, 0.5928945
 
 [node name="fan" parent="." unique_id=378747184 instance=ExtResource("10_fjkhj")]
 transform = Transform3D(0.23170899, 0, -0.40891436, 0, 0.47, 0, 0.40891436, 0, 0.23170899, 3.1666946, -3.190765, 5.188623)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=274866870]
+stream = ExtResource("11_1pxqc")
+volume_db = -12.922
+autoplay = true
