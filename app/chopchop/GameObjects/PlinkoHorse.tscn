@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4c3xiy0tv1vv" path="res://GameObjects/plinko_horse.gd" id="1_hx2us"]
 [ext_resource type="PackedScene" uid="uid://h8ih6btjqpfd" path="res://Models/horse.fbx" id="2_8qvu0"]
+[ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="3_udwmk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xcrvh"]
 
@@ -11,6 +12,7 @@ script = ExtResource("1_hx2us")
 
 [node name="horse" parent="." unique_id=546345079 instance=ExtResource("2_8qvu0")]
 transform = Transform3D(-4.374508e-07, 0, 5.8426156, 0, 8.407569, 0, -10.007709, 0, -2.5538887e-07, 0.018257678, 0.25260353, -0.07150924)
+script = ExtResource("3_udwmk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1725602663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1796, 0)

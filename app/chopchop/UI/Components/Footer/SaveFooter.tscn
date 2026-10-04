@@ -27,13 +27,14 @@ script = ExtResource("1_cm3yt")
 custom_maximum_size = Vector2(100, -1)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Save"
+text = "Continue
+"
 
 [node name="Button2" type="Button" parent="." unique_id=1095981818]
 custom_maximum_size = Vector2(100, -1)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Load
+text = "Undo
 "
 
 [connection signal="gui_input" from="RichTextLabel" to="RichTextLabel" method="_on_gui_input"]
