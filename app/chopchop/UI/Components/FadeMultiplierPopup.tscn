@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b2i11nugdxwil"]
+
+[ext_resource type="Script" path="res://UI/Components/FadeRichTextLabel.gd" id="1_0etpf"]
+
+[node name="FadeMultiplierPopup" type="Control" unique_id=937565814]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FadeRichTextLabel" type="RichTextLabel" parent="." unique_id=1769485128 node_paths=PackedStringArray("delayTimer")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 42
+script = ExtResource("1_0etpf")
+Text = "Multiplier"
+delayTimer = NodePath("../Timer")
+fadeOut = true
+metadata/_custom_type_script = "uid://dshri1amwkq03"
+
+[node name="Timer" type="Timer" parent="." unique_id=747578850]
+wait_time = 0.2
+autostart = true
