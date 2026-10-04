@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://duh5w5qnvya6p"]
+
+[ext_resource type="PackedScene" uid="uid://dkmuo7ai5veul" path="res://Models/hay.fbx" id="1_sifgm"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_h621a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luob6"]
+albedo_texture = ExtResource("2_h621a")
+
+[node name="hay" unique_id=1020340716 instance=ExtResource("1_sifgm")]
+
+[node name="hay" parent="." index="0" unique_id=285561196]
+material_override = SubResource("StandardMaterial3D_luob6")

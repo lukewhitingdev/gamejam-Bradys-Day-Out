@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b2vordittu2k2"]
+
+[ext_resource type="PackedScene" uid="uid://cx8rd8anr1b4m" path="res://Models/trough.fbx" id="1_d815a"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_webck"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgcw8"]
+albedo_texture = ExtResource("2_webck")
+
+[node name="trough" unique_id=405788310 instance=ExtResource("1_d815a")]
+
+[node name="trough" parent="." index="0" unique_id=840344295]
+material_override = SubResource("StandardMaterial3D_dgcw8")

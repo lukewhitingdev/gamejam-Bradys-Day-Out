@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cfeca33rkglhh"]
+
+[ext_resource type="PackedScene" uid="uid://b4qwe4wg6jec0" path="res://Models/chair.fbx" id="1_mgsdj"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_x64mg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqcvq"]
+albedo_texture = ExtResource("2_x64mg")
+
+[node name="chair" unique_id=33455100 instance=ExtResource("1_mgsdj")]
+
+[node name="chair" parent="." index="0" unique_id=575245761]
+material_override = SubResource("StandardMaterial3D_eqcvq")

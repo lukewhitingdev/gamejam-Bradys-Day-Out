@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://of7wa2x2oi8"]
+
+[ext_resource type="PackedScene" uid="uid://m8qrkn7ir1gp" path="res://Models/wateringcan.fbx" id="1_2rx7y"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_q2ytg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56m1h"]
+albedo_texture = ExtResource("2_q2ytg")
+
+[node name="wateringcan" unique_id=302637402 instance=ExtResource("1_2rx7y")]
+
+[node name="wateringcan" parent="." index="0" unique_id=1873003718]
+material_override = SubResource("StandardMaterial3D_56m1h")

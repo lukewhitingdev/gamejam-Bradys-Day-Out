@@ -5,12 +5,60 @@
 [ext_resource type="PackedScene" uid="uid://c8m6ofnemq81q" path="res://GameObjects/paper_toss_reset.tscn" id="4_imv7t"]
 [ext_resource type="Script" uid="uid://od6v1e0dtgat" path="res://Maps/paper_toss_throw_progress_bar.gd" id="5_5kxta"]
 [ext_resource type="PackedScene" uid="uid://c1pqfq6657opo" path="res://GameObjects/PaperTossBin.tscn" id="5_7vvsj"]
+[ext_resource type="PackedScene" uid="uid://duh5w5qnvya6p" path="res://GameObjects/Environment/hay.tscn" id="6_m5tmt"]
+[ext_resource type="PackedScene" uid="uid://b2vordittu2k2" path="res://GameObjects/Environment/trough.tscn" id="7_ckyqm"]
+[ext_resource type="PackedScene" uid="uid://of7wa2x2oi8" path="res://GameObjects/Environment/wateringcan.tscn" id="8_1pxqc"]
+[ext_resource type="PackedScene" uid="uid://cfeca33rkglhh" path="res://GameObjects/Environment/chair.tscn" id="9_7dw8v"]
+[ext_resource type="PackedScene" uid="uid://dfc55gmhp2c3v" path="res://GameObjects/Environment/fan.tscn" id="10_fjkhj"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_13qdw"]
 
 [sub_resource type="Compositor" id="Compositor_b1lj4"]
+
+[sub_resource type="Gradient" id="Gradient_7dw8v"]
+colors = PackedColorArray(0.4710039, 0.24988335, 0.154068, 1, 0.34510756, 0.12163893, 0.028358951, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_okyyj"]
+frequency = 0.0408
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kys6k"]
+noise = SubResource("FastNoiseLite_okyyj")
+color_ramp = SubResource("Gradient_7dw8v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5kxta"]
+albedo_color = Color(0.96900743, 0.8333485, 0.8167423, 1)
+albedo_texture = SubResource("NoiseTexture2D_kys6k")
+
+[sub_resource type="Gradient" id="Gradient_1pxqc"]
+colors = PackedColorArray(0.5479977, 0.26192188, 0.14127925, 1, 0.3337221, 0.12497606, 0.040052608, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tlukq"]
+noise_type = 4
+frequency = 0.0463
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_flg0s"]
+noise = SubResource("FastNoiseLite_tlukq")
+color_ramp = SubResource("Gradient_1pxqc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vvsj"]
+albedo_color = Color(0.9731452, 0.8557938, 0.8413095, 1)
+albedo_texture = SubResource("NoiseTexture2D_flg0s")
+
+[sub_resource type="Gradient" id="Gradient_rgb5j"]
+colors = PackedColorArray(0.74300885, 0.32561746, 0.18187389, 1, 0.55249244, 0.2207048, 0.2364065, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kb54w"]
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gvicd"]
+noise = SubResource("FastNoiseLite_kb54w")
+color_ramp = SubResource("Gradient_rgb5j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5tmt"]
+albedo_color = Color(0.941145, 0.691138, 0.66281646, 1)
+albedo_texture = SubResource("NoiseTexture2D_gvicd")
 
 [node name="PaperToss" type="Node3D" unique_id=178533814]
 script = ExtResource("1_a5irk")
@@ -24,23 +72,26 @@ compositor = SubResource("Compositor_b1lj4")
 transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 15.150552, 0)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
-transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.510983, -5.103783, 2.1967869)
+transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.512635, -5.0486073, 2.1895618)
 use_collision = true
+material = SubResource("StandardMaterial3D_5kxta")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1294853535]
-transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.85487, -5.103783, -3.1354332)
+transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.912888, -5.0834336, -3.1515236)
 use_collision = true
+material = SubResource("StandardMaterial3D_7vvsj")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1511665687]
 transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, 23.69794, -5.103783, 2.1967869)
 use_collision = true
+material = SubResource("StandardMaterial3D_m5tmt")
 
 [node name="PaperTossHorse" parent="." unique_id=623002710 instance=ExtResource("1_4g1hd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19333589, -0.5884664, 4.684843)
+transform = Transform3D(3.006588, 0, 0, 0, 2.0442224, 0, 0, 0, 2.2789156, 0.19333589, -0.5884664, 4.684843)
 BeginCameraPosition = Vector3(0, 0, 10)
 
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
-transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.2672424, -5.579458, -2.1354332)
+transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.271221, -5.590242, -2.1315084)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1820822555]
 
@@ -68,4 +119,28 @@ script = ExtResource("5_5kxta")
 maxVelo = 2000
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
-transform = Transform3D(2.575, 0, 0, 0, 2.575, 0, 0, 0, 2.575, 7.6612744, -4.640275, -0.76033306)
+transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.640275, -0.53003263)
+
+[node name="hay3" parent="." unique_id=616655316 instance=ExtResource("6_m5tmt")]
+transform = Transform3D(0.47594452, 0, -0.87947536, 0, 1, 0, 0.87947536, 0, 0.47594452, 19.88044, -4.925209, 11.182581)
+
+[node name="hay2" parent="." unique_id=1254739528 instance=ExtResource("6_m5tmt")]
+transform = Transform3D(0.27623904, 0, -0.5065778, 0, 0.577, 0, 0.5065778, 0, 0.27623904, -5.5587196, -4.9133015, 2.7428885)
+
+[node name="hay5" parent="." unique_id=1020340716 instance=ExtResource("6_m5tmt")]
+transform = Transform3D(0.34108397, 0, -0.23989734, 0, 0.41699997, 0, 0.23989734, 0, 0.34108397, -5.9202714, -2.9614487, 5.707426)
+
+[node name="hay4" parent="." unique_id=1538372992 instance=ExtResource("6_m5tmt")]
+transform = Transform3D(0.49375066, -0.01850161, -0.29798815, 0.015659733, 0.5767032, -0.009859222, 0.298151, 0.00034937786, 0.4939988, 5.3797994, -4.925168, 5.139223)
+
+[node name="trough" parent="." unique_id=405788310 instance=ExtResource("7_ckyqm")]
+transform = Transform3D(-0.42125297, 0, 0.33303893, 0, 0.537, 0, -0.33303893, 0, -0.42125297, -5.3177605, -4.000147, 6.022343)
+
+[node name="wateringcan" parent="." unique_id=302637402 instance=ExtResource("8_1pxqc")]
+transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, -5.213612, -3.5185437, 3.3368835)
+
+[node name="chair" parent="." unique_id=33455100 instance=ExtResource("9_7dw8v")]
+transform = Transform3D(0.120420024, 0, -0.59289455, 0, 0.60499996, 0, 0.59289455, 0, 0.120420024, 9.244328, -4.90339, 2.2701817)
+
+[node name="fan" parent="." unique_id=378747184 instance=ExtResource("10_fjkhj")]
+transform = Transform3D(0.23170899, 0, -0.40891436, 0, 0.47, 0, 0.40891436, 0, 0.23170899, 4.8188515, -3.190765, 5.188623)
