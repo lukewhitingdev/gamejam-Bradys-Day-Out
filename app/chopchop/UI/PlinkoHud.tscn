@@ -34,7 +34,7 @@ grow_horizontal = 0
 bbcode_enabled = true
 text = "How to play: 
 Move Left - A or Left Arrow
-Move Right -   D or Right Arrow
+Move Right - D or Right Arrow
 Drop - Space or Enter"
 horizontal_alignment = 2
 

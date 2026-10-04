@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ld10s1rtvfof" path="res://UI/MainMenuCanvas.tscn" id="1_54vni"]
 [ext_resource type="AudioStream" uid="uid://cu3furm2syuph" path="res://Audio/Horse game menu (final).wav" id="2_2gj0u"]
 [ext_resource type="PackedScene" uid="uid://cbhx8i1ra5v3h" path="res://Models/horse.tscn" id="3_cixre"]
+[ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="4_c3h6f"]
 
 [sub_resource type="Gradient" id="Gradient_7thxo"]
 colors = PackedColorArray(0.8980392, 0.6627451, 0.3529412, 1, 0.59891987, 0.2748854, 0.5987709, 1)
@@ -39,6 +40,7 @@ autoplay = true
 
 [node name="horse" parent="." unique_id=1785070167 instance=ExtResource("3_cixre")]
 transform = Transform3D(17.20299, 0, 0, 0, 8.050666, 0, 0, 0, 3.5253966, 0, 0.10282862, 0)
+script = ExtResource("4_c3h6f")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1924672138]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21121708, 1.1173935)
