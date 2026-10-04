@@ -80,3 +80,4 @@ mesh = SubResource("BoxMesh_b1lj4")
 
 [node name="ScoreAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=647101268]
 stream = ExtResource("2_qi12x")
+volume_db = -33.475
