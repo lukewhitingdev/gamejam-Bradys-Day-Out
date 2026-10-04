@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ceo1vtlk5qg40"]
 
 [ext_resource type="Script" uid="uid://0nvls88uw6pp" path="res://UI/credits_ui.gd" id="1_oyl5k"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="2_kcmyu"]
 
 [node name="Control" type="Control" unique_id=1092030268]
 layout_mode = 3
@@ -61,5 +62,8 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 6
 text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=359277044]
+stream = ExtResource("2_kcmyu")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
