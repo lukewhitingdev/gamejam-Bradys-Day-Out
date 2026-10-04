@@ -226,6 +226,21 @@ layout_mode = 2
 size_flags_horizontal = 3
 nextScene = ExtResource("30_bfgaf")
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI" unique_id=73612927]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -234.0
+offset_bottom = 102.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5254902)
+theme_override_constants/shadow_outline_size = 2
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+bbcode_enabled = true
+text = "Hold [right click] to rotate"
+horizontal_alignment = 2
+
 [node name="grass" parent="." unique_id=274286477 instance=ExtResource("30_tnpur")]
 transform = Transform3D(30, 0, 0, 0, 44.168, 0, 0, 0, 30, 0.9084504, -0.009738326, -1.61671)
 
