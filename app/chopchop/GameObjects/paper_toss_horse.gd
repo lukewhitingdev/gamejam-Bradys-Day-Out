@@ -4,6 +4,7 @@ var ShouldFire = false
 var CanFire = true
 var OriginalPosition = Vector3.ZERO
 var OriginalRotation = Vector3.ZERO
+@onready var ThrowSound = $AudioStreamPlayer
 
 @export var Gravity = 1.0;
 @export var BeginCameraPosition = Vector3(6, 13, 20)
@@ -40,6 +41,7 @@ func _input(event: InputEvent) -> void:
 					gravity_scale = 1.0
 					var Impulse = Vector3(Direction.x, -Direction.y, -1) * length;
 					apply_impulse(Impulse)
+					ThrowSound.play()
 
 	if event.is_action_pressed("start_game"):
 		_reset()

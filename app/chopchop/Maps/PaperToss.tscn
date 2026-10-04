@@ -136,7 +136,7 @@ bbcode_enabled = true
 vertical_alignment = 1
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
-transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.640275, -0.53003263)
+transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.412638, -0.53003263)
 Score = 1000.0
 
 [node name="hay3" parent="." unique_id=616655316 instance=ExtResource("6_m5tmt")]

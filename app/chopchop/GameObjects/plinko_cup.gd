@@ -12,9 +12,10 @@ func _ready() -> void:
 		if StaticBody is StaticBody3D:
 			var StaticBodyChild = StaticBody.get_child(0)
 			if StaticBodyChild and StaticBodyChild is CollisionShape3D:
-				var Mesh = StaticBodyChild.get_child(0)
-				if Mesh and Mesh is MeshInstance3D:
-					Mesh.set_surface_override_material(0, RodMaterial)
+				if(StaticBodyChild.get_child_count() > 0):
+					var Mesh = StaticBodyChild.get_child(0)
+					if Mesh and Mesh is MeshInstance3D:
+						Mesh.set_surface_override_material(0, RodMaterial)
 			elif StaticBodyChild and StaticBodyChild is Area3D:
 				StaticBodyChild.body_entered.connect(_hit_cup)
 
