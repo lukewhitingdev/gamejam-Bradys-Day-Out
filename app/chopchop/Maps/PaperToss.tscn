@@ -69,7 +69,10 @@ camera_attributes = SubResource("CameraAttributesPractical_13qdw")
 compositor = SubResource("Compositor_b1lj4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=841031461]
-transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 15.150552, 0)
+transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 15.150552, 3.567728)
+light_energy = 0.584
+light_angular_distance = 47.2
+shadow_enabled = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
 transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.512635, -5.0486073, 2.1895618)
@@ -77,7 +80,7 @@ use_collision = true
 material = SubResource("StandardMaterial3D_5kxta")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1294853535]
-transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.912888, -5.0834336, -3.1515236)
+transform = Transform3D(3.2366032e-13, -4.3711385e-08, -138.72176, -169.38113, -0.012741064, 7.725797e-08, -2.158271, 0.9999188, -6.0632283e-06, 17.912888, -5.0834336, -3.1515236)
 use_collision = true
 material = SubResource("StandardMaterial3D_7vvsj")
 
@@ -120,6 +123,7 @@ maxVelo = 2000
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
 transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.640275, -0.53003263)
+Score = 1000.0
 
 [node name="hay3" parent="." unique_id=616655316 instance=ExtResource("6_m5tmt")]
 transform = Transform3D(0.47594452, 0, -0.87947536, 0, 1, 0, 0.87947536, 0, 0.47594452, 19.88044, -4.925209, 11.182581)

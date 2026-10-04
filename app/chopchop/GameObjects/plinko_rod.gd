@@ -1,4 +1,4 @@
-extends Node3D
+class_name PlinkoRod extends Node3D
 
 @export var HitSpeedRange: Vector2 = Vector2(3.0, 10.0)
 @export var RodMaterial: StandardMaterial3D
@@ -24,5 +24,4 @@ func _hit_cup(body) -> void:
 		body.apply_impulse(Direction * HitSpeed)
 
 func _Debug_Tally_Score() -> void:
-	print("Bounce")
 	PlinkoHitPlayer.play()

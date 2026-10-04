@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dcvyrpd2vkymu"]
+
+[ext_resource type="PackedScene" uid="uid://cibu7lp5t2ylk" path="res://Models/podium.fbx" id="1_3dbl3"]
+
+[sub_resource type="Gradient" id="Gradient_gb4k0"]
+offsets = PackedFloat32Array(0, 0.59455127, 0.9791667, 1)
+colors = PackedColorArray(0.7756441, 0.5270359, 0.3019855, 0, 0.8953753, 0.7886622, 0.7370131, 0.85897434, 0.91212875, 0.8252704, 0.7978845, 0.9791667, 0.9150327, 0.83161587, 0.80843556, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_asxgv"]
+noise_type = 3
+frequency = 0.0334
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dkig2"]
+noise = SubResource("FastNoiseLite_asxgv")
+color_ramp = SubResource("Gradient_gb4k0")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a514"]
+albedo_color = Color(0.47240698, 0.44470873, 0.16503009, 1)
+albedo_texture = SubResource("NoiseTexture2D_dkig2")
+
+[node name="podium" unique_id=1944698433 instance=ExtResource("1_3dbl3")]
+
+[node name="pCylinder1" parent="." index="0" unique_id=736029997]
+surface_material_override/0 = SubResource("StandardMaterial3D_3a514")

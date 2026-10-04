@@ -60,7 +60,9 @@ background_mode = 2
 sky = SubResource("Sky_r8qcy")
 ambient_light_source = 3
 ambient_light_color = Color(0.38161805, 0.758266, 0.722315, 1)
+glow_intensity = 0.8
 fog_light_color = Color(0.5807576, 0.5807576, 0.5807576, 1)
+fog_density = 0.0
 fog_sky_affect = 0.0
 fog_height_density = 3.1386
 
@@ -157,12 +159,23 @@ metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38972014, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=825842716]
-transform = Transform3D(0.8067472, 0.18124612, 0.56241345, -0.56676304, -0.031889994, 0.82326347, 0.16714866, -0.9829206, 0.07699642, 3.3882654, 10.050013, 0.40582454)
+transform = Transform3D(0.59986514, 0.33942556, 0.72453576, -0.78528225, 0.07628854, 0.6144198, 0.15327601, -0.9375342, 0.31230775, 1.1622524, 10.050013, 0.40582454)
+light_color = Color(0.9490196, 0.94509804, 0.6313726, 1)
+light_energy = 1.277
+light_indirect_energy = 1.835
+light_volumetric_fog_energy = 0.84
+light_angular_distance = 26.43
 shadow_enabled = true
 shadow_bias = 0.0
+sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=197145423]
 environment = SubResource("Environment_h66jr")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="WorldEnvironment" unique_id=2014950009]
+transform = Transform3D(-0.31419024, 0.016267082, -0.94922066, 0.0051116347, 0.9998677, 0.015443093, 0.9493463, 0, -0.3142318, -3.3173356, 1.418692, -0.69626904)
+light_color = Color(0.8038563, 1, 0.75328386, 1)
+light_energy = 3.448
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=355926493]
 transform = Transform3D(0.6929822, 0, 0, 0, 1, 0, 0, 0, 0.8620851, -0.1338737, -11.014174, 0)
