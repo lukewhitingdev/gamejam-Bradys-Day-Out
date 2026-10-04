@@ -58,7 +58,6 @@ func _OnScore(_score) -> void:
 
 	lastShotWasIn = true
 	total_score += _score * currentMulti
-	GlobalScore._add_score(_score)
 	_ResetHorse()
 
 func _ResetHorse() -> void:
@@ -73,3 +72,4 @@ func _ResetHorse() -> void:
 		var instance = scene.instantiate()
 		instance._set_score(total_score)
 		UIParent.add_child(instance)
+		GlobalScore._add_score(total_score)
