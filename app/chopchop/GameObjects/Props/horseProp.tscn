@@ -10,7 +10,7 @@ albedo_texture = ExtResource("1_1c42o")
 [node name="HorseProp" type="Node3D" unique_id=1084183793]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1765795721]
-transform = Transform3D(-1.0234775e-07, 1.7080274, -8.742278e-08, 0, -7.466025e-08, -2, -2.3414435, -7.466025e-08, 3.821371e-15, 0, 0.07303197, 0)
+transform = Transform3D(-3.059797e-07, 5.107, -2.614378e-07, 0, -2.2323405e-07, -5.981, -7, -2.2323405e-07, 1.1427809e-14, 0, 0.07303197, 0)
 material_override = SubResource("StandardMaterial3D_t20iq")
 mesh = ExtResource("2_n8gc6")
 surface_material_override/0 = ExtResource("3_njhdh")
