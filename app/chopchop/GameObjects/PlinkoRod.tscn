@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dwfebfmu0rbf" path="res://GameObjects/plinko_rod.gd" id="1_ia8jc"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ia8jc"]
+albedo_color = Color(0.047058824, 0.23921569, 1, 1)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_13qdw"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_b1lj4"]
@@ -12,6 +15,7 @@
 
 [node name="PlinkoRod" type="Node3D" unique_id=1091799831]
 script = ExtResource("1_ia8jc")
+RodMaterial = SubResource("StandardMaterial3D_ia8jc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1708990952]
 
