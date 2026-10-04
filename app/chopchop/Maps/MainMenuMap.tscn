@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://3mhi6vechsl8"]
 
 [ext_resource type="PackedScene" uid="uid://ld10s1rtvfof" path="res://UI/MainMenuCanvas.tscn" id="1_54vni"]
+[ext_resource type="AudioStream" uid="uid://cu3furm2syuph" path="res://Audio/Horse game menu (final).wav" id="2_2gj0u"]
 
 [node name="MainMenuMap" type="Node3D" unique_id=1474193702]
 
 [node name="MainMenuCanvas" parent="." unique_id=744911691 instance=ExtResource("1_54vni")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=912093446]
+stream = ExtResource("2_2gj0u")
+autoplay = true
