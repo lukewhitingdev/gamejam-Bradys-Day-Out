@@ -22,12 +22,25 @@ func _load_horse() -> void:
 	for AccessoryData in Horsinator4000mk7.HorseAccessories:
 		_add_accessory(AccessoryData)
 		
+func _remove_last_accessory() -> void:
+	if !AddedHorseAccessoriesNodes.is_empty():
+		AddedHorseAccessoriesNodes.back().queue_free()
+		AddedHorseAccessoriesNodes.pop_back()
+		AddedHorseAccessories.pop_back()
+
 func _add_accessory(Data: HorseAccessoryData) -> void:
-	AddedHorseAccessories.push_back(Data)
 	var scene = load(Data.AccessoryPath)
 	var instance = scene.instantiate()
 	add_child(instance)
-	instance.global_transform = Data.AccessoryTransform
+	instance.add_to_group("Accessories")
+	if !Data.bUseLocalTransform:
+		instance.global_transform = Data.AccessoryTransform
+		Data.AccessoryTransform = instance.transform
+		Data.bUseLocalTransform = true
+	else:
+		instance.transform = Data.AccessoryTransform
+		
+	AddedHorseAccessories.push_back(Data)
 	AddedHorseAccessoriesNodes.push_back(instance)
 
 func _save_horse() -> void:
