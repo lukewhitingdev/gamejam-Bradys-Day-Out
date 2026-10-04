@@ -4,8 +4,8 @@ var cups: Array[PlinkoCup] = []
 
 @onready var horse_spawn: Marker3D = $HorseSpawn
 @onready var plinko_horse: PlinkoHorseScript = $PlinkoHorse
-@onready var scene = load("res://UI/PlinkoHud.tscn")
-@onready var hud_instance = scene.instantiate()
+@onready var hud_scene = load("res://UI/PlinkoHud.tscn")
+@onready var hud_instance = hud_scene.instantiate()
 
 var total_score: int = 0
 

@@ -5,6 +5,7 @@ extends Node3D
 
 @onready var area3d = $StaticBody3D/Area3D
 @onready var OriginalPos: Vector3 = area3d.global_position
+@onready var PlinkoHitPlayer: AudioStreamPlayer = $PlinkoHitPlayer
 
 signal OnHit()
 
@@ -24,3 +25,4 @@ func _hit_cup(body) -> void:
 
 func _Debug_Tally_Score() -> void:
 	print("Bounce")
+	PlinkoHitPlayer.play()

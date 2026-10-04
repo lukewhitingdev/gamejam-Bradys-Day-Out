@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wphnss3bggw7"]
 
 [ext_resource type="Script" uid="uid://dwfebfmu0rbf" path="res://GameObjects/plinko_rod.gd" id="1_ia8jc"]
+[ext_resource type="AudioStream" uid="uid://dxos57s6kvvvc" path="res://Audio/plink hit sound.wav" id="2_2sn8n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ia8jc"]
 albedo_color = Color(0.047058824, 0.23921569, 1, 1)
@@ -16,6 +17,9 @@ albedo_color = Color(0.047058824, 0.23921569, 1, 1)
 [node name="PlinkoRod" type="Node3D" unique_id=1091799831]
 script = ExtResource("1_ia8jc")
 RodMaterial = SubResource("StandardMaterial3D_ia8jc")
+
+[node name="PlinkoHitPlayer" type="AudioStreamPlayer" parent="." unique_id=2027619030]
+stream = ExtResource("2_2sn8n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1708990952]
 
