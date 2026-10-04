@@ -90,7 +90,7 @@ use_collision = true
 material = SubResource("StandardMaterial3D_m5tmt")
 
 [node name="PaperTossHorse" parent="." unique_id=623002710 instance=ExtResource("1_4g1hd")]
-transform = Transform3D(3.006588, 0, 0, 0, 2.0442224, 0, 0, 0, 2.2789156, 0.19333589, -0.5884664, 4.684843)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.19333589, -0.5884664, 4.684843)
 BeginCameraPosition = Vector3(0, 0, 10)
 
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
@@ -120,6 +120,20 @@ rotation = 0.0013916706
 fill_mode = 3
 script = ExtResource("5_5kxta")
 maxVelo = 2000
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control" unique_id=1773574285]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 100.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Control/HBoxContainer" unique_id=570139109]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+bbcode_enabled = true
+vertical_alignment = 1
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
 transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.640275, -0.53003263)

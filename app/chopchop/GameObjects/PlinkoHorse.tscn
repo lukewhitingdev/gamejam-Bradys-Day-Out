@@ -11,7 +11,7 @@ can_sleep = false
 script = ExtResource("1_hx2us")
 
 [node name="horse2" parent="." unique_id=1785070167 instance=ExtResource("2_udwmk")]
-transform = Transform3D(-4.3745078e-07, 0, 5.842615, 0, 8.407568, 0, -10.007708, 0, -2.5538887e-07, 0.018257678, 0.25260353, -0.07150924)
+transform = Transform3D(1.0490733e-06, 0, -8, 0, 8, 0, 8, 0, 1.0490733e-06, 0.018257678, 0.25260353, -0.07150924)
 script = ExtResource("3_udwmk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1725602663]
