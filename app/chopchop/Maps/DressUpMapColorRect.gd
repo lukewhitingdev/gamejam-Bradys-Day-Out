@@ -11,7 +11,9 @@ func _ready() -> void:
 func _on_fold_changed(value: bool):
 	if(value):
 		assetSelector.hide()
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
 		self.color.a = 0
 	else:
 		assetSelector.show()
+		mouse_filter = Control.MOUSE_FILTER_PASS
 		self.color.a = 255 

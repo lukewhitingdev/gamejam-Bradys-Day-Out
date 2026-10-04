@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hr8et")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=867520919]
+[node name="ScoreText" type="RichTextLabel" parent="." unique_id=867520919]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 289.0
@@ -24,11 +24,24 @@ offset_right = 184.0
 offset_bottom = 71.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=196634573]
-layout_mode = 0
-offset_top = 34.0
-offset_right = 247.0
-offset_bottom = 136.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -247.0
+offset_bottom = 102.0
+grow_horizontal = 0
+bbcode_enabled = true
 text = "How to play: 
 Move Left - A or Left Arrow
 Move Right -   D or Right Arrow
 Drop - Space or Enter"
+horizontal_alignment = 2
+
+[node name="Multiplier" type="RichTextLabel" parent="." unique_id=1986319251]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 27.0
+offset_right = 255.0
+offset_bottom = 119.0
+text = "Multiplier = ########"

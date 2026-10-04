@@ -9,19 +9,28 @@ extends Node3D
 
 @onready var UIParent: Control = $UI/Control
 
-var total_score: int = 0
+var lastShotWasIn = false
 
+var total_score: int = 0
 var times_ran: int = 0
 
 func _ready() -> void:
 	Bin.OnScore.connect(_OnScore)
-	ResetCollision.OnHit.connect(_ResetHorse)
+	ResetCollision.OnHit.connect(_reset_collision)
 	Horse.OnFiring.connect(_on_firing)
 
 func _on_firing(velo: Vector2, normDir: Vector2):
 	PaperTossProgressBar.on_firing(velo, normDir)
 
+func _reset_collision():
+	lastShotWasIn = false
+	_ResetHorse()
+
 func _OnScore(_score) -> void:
+	if (lastShotWasIn == true):
+		print("Multi")
+
+	lastShotWasIn = true
 	total_score += _score
 	_ResetHorse()
 
