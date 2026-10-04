@@ -6,6 +6,8 @@ var cups: Array[PlinkoCup] = []
 @onready var plinko_horse: PlinkoHorseScript = $PlinkoHorse
 
 var total_score: int = 0
+
+var times_ran: int = 0;
  
 func _ready():
 	var children = get_children()
@@ -26,7 +28,16 @@ func _on_plinko_scored(score: int):
 	_reset_horse()
 
 func _reset_horse():
-	print("reseting horse")
-	plinko_horse._reset_horse()
-	plinko_horse.set_global_position(horse_spawn.position)
-	plinko_horse.set_global_rotation(horse_spawn.rotation)
+	
+	if times_ran < 0:
+		print("reseting horse")
+		plinko_horse._reset_horse()
+		plinko_horse.set_global_position(horse_spawn.position)
+		plinko_horse.set_global_rotation(horse_spawn.rotation)
+		times_ran += 1
+	else:
+		var scene = load("res://UI/plinko_finished_ui.tscn")
+		var instance = scene.instantiate()
+		instance._set_score(total_score)
+		add_child(instance)
+	
