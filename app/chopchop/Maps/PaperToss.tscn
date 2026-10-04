@@ -146,9 +146,9 @@ offset_bottom = 102.0
 grow_horizontal = 0
 bbcode_enabled = true
 text = "How to play: 
-1. Hold down [right click]
+1. Hold down [left click]
 2. Swipe mouse in direction
-3. Release [right click] to toss"
+3. Release [left click] to toss"
 horizontal_alignment = 2
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
