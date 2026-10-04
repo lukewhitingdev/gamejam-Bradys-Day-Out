@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="5_f8hj6"]
 [ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="6_ia83l"]
 [ext_resource type="Script" uid="uid://bg2q5a5iepybr" path="res://Maps/go_scene_button.gd" id="6_lofwt"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="7_iqajh"]
 [ext_resource type="PackedScene" uid="uid://3mhi6vechsl8" path="res://Maps/MainMenuMap.tscn" id="7_n23oh"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="7_sf5he"]
 [ext_resource type="PackedScene" uid="uid://dcvyrpd2vkymu" path="res://GameObjects/Environment/podium.tscn" id="9_n23oh"]
@@ -166,6 +167,9 @@ size_flags_vertical = 8
 text = "Back to main menu"
 script = ExtResource("6_lofwt")
 targetScene = ExtResource("7_n23oh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UI/Control/HBoxContainer/MarginContainer/Button" unique_id=839594986]
+stream = ExtResource("7_iqajh")
 
 [node name="PlayerHorse" parent="." unique_id=1785070167 instance=ExtResource("6_ia83l")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 1.4685198, 0)
