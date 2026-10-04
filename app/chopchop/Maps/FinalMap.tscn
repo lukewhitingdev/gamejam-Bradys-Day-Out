@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://inahlyobeq4y"]
 
 [ext_resource type="Script" uid="uid://bf10g74v8tyc5" path="res://Maps/final_map_manager.gd" id="1_3l6nh"]
-[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/Horse/horsemat.tres" id="2_lofwt"]
 [ext_resource type="Script" uid="uid://bk4yet0h4ldy4" path="res://Maps/tween_marker.gd" id="3_n23oh"]
 [ext_resource type="AudioStream" uid="uid://7sncltn6qthe" path="res://Audio/Victory sound 3.wav" id="4_iqajh"]
 [ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="5_f8hj6"]
@@ -9,8 +8,24 @@
 [ext_resource type="Script" uid="uid://bg2q5a5iepybr" path="res://Maps/go_scene_button.gd" id="6_lofwt"]
 [ext_resource type="PackedScene" uid="uid://3mhi6vechsl8" path="res://Maps/MainMenuMap.tscn" id="7_n23oh"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="7_sf5he"]
+[ext_resource type="PackedScene" uid="uid://dcvyrpd2vkymu" path="res://GameObjects/Environment/podium.tscn" id="9_n23oh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itnuj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t8m6q"]
+sky_top_color = Color(0.65021396, 0.36460024, 0.16651848, 1)
+sky_horizon_color = Color(0.83760935, 0.31521532, 0.357429, 1)
+ground_bottom_color = Color(0.22577456, 0.14339542, 0.20549554, 1)
+ground_horizon_color = Color(0.7270715, 0.39398772, 0.33466282, 1)
+
+[sub_resource type="Sky" id="Sky_j2i6j"]
+sky_material = SubResource("ProceduralSkyMaterial_t8m6q")
+
+[sub_resource type="Environment" id="Environment_5divm"]
+background_mode = 2
+background_energy_multiplier = 1.45
+sky = SubResource("Sky_j2i6j")
+ambient_light_color = Color(0.36853883, 0.65209067, 0.58735895, 1)
 
 [node name="FinalMap" type="Node3D" unique_id=459672555 node_paths=PackedStringArray("lookAtTarget")]
 script = ExtResource("1_3l6nh")
@@ -24,10 +39,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9096345, 3.8369653)
 transform = Transform3D(1, 0, 0, 0, 0.7154609, 0.69865274, 0, -0.69865274, 0.7154609, 0, 2.4140344, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1685444198]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D" unique_id=1909743767]
-transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
-material = ExtResource("2_lofwt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2012574587]
 transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
@@ -167,6 +178,12 @@ targetScene = ExtResource("7_n23oh")
 [node name="PlayerHorse" parent="." unique_id=1785070167 instance=ExtResource("6_ia83l")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 1.4685198, 0)
 script = ExtResource("7_sf5he")
+
+[node name="podium" parent="." unique_id=1944698433 instance=ExtResource("9_n23oh")]
+transform = Transform3D(22.42, 0, 0, 0, 22.42, 0, 0, 0, 22.42, -0.016392231, -4.0523543, -0.050907254)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1994944159]
+environment = SubResource("Environment_5divm")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="gui_input" from="UI/Control/HBoxContainer/MarginContainer2/Button" to="UI/Control/HBoxContainer/MarginContainer2/Button" method="_on_gui_input"]
