@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bcqaxobqrssin"]
 
 [ext_resource type="Script" uid="uid://dt4hm0f3x0dhn" path="res://GameObjects/plinko_cup.gd" id="1_iubmt"]
+[ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="2_qi12x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iubmt"]
 albedo_color = Color(1, 1, 0, 1)
@@ -76,3 +77,6 @@ shape = SubResource("BoxShape3D_xrivr")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1082620207]
 transform = Transform3D(1, 0, 0, 0, 0.23043478, 0, 0, 0, 1, 0, 0.10473353, 0)
 mesh = SubResource("BoxMesh_b1lj4")
+
+[node name="ScoreAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=647101268]
+stream = ExtResource("2_qi12x")

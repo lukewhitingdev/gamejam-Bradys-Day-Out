@@ -2,6 +2,7 @@ class_name PlinkoCup extends Node3D
 
 @export var RodMaterial: StandardMaterial3D
 @export var Score: float = 0
+@onready var ScoreAudio = $ScoreAudioPlayer
 
 signal OnScore(score)
 
@@ -21,6 +22,7 @@ func _ready() -> void:
 func _hit_cup(body) -> void:
 	if body is RigidBody3D:
 		OnScore.emit(Score)
+		ScoreAudio.play()
 
 func _Debug_Tally_Score(score) -> void:
 	print("Plinko end. Score = ", score)
