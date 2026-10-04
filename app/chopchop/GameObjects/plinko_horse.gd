@@ -7,8 +7,9 @@ var HasGameStarted = false
 @export var FallingCameraOffset = 5.0
 @export var MoveAmount = 1.0
 
+@onready var BeginCamera = $BeginCam
+
 func _ready() -> void:
-	var BeginCamera = $BeginCam
 	BeginCamera.position = BeginCameraPosition
 	BeginCamera.make_current()
 	gravity_scale = 0
@@ -31,3 +32,10 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	var FallCam = $FallingCam
 	FallCam.position = Vector3(position.x, position.y, position.z + FallingCameraOffset)
+	
+func _reset_horse() -> void:
+	BeginCamera.make_current()
+	HasGameStarted = false
+	gravity_scale = 0.0
+	angular_velocity = Vector3.ZERO
+	set_linear_velocity(Vector3.ZERO)

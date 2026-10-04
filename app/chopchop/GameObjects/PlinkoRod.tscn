@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://wphnss3bggw7"]
+
+[ext_resource type="Script" uid="uid://dwfebfmu0rbf" path="res://GameObjects/plinko_rod.gd" id="1_ia8jc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_13qdw"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b1lj4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrivr"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_13qdw"]
+
+[node name="PlinkoRod" type="Node3D" unique_id=1091799831]
+script = ExtResource("1_ia8jc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1708990952]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1214717422]
+shape = SubResource("CylinderShape3D_13qdw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=864335529]
+mesh = SubResource("CylinderMesh_b1lj4")
+
+[node name="Area3D" type="Area3D" parent="StaticBody3D" unique_id=271891743]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D" unique_id=139318747]
+shape = SubResource("CylinderShape3D_xrivr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/Area3D/CollisionShape3D" unique_id=872684631]
+mesh = SubResource("CylinderMesh_13qdw")
