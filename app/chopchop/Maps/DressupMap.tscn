@@ -255,7 +255,7 @@ transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -1.0617051, -0.22654
 transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -0.89216256, -0.093072295, -2.5960786)
 
 [node name="DressupLoop" type="AudioStreamPlayer3D" parent="." unique_id=997175771]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9496983, -1.1920929e-07, -4.8087673)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9496983, 5.930503, -4.8087673)
 stream = ExtResource("32_mitln")
 volume_db = -2.807
 autoplay = true
