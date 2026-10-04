@@ -4,10 +4,13 @@ var bMouseLook: bool = false
 var TargetRotation: Vector3 = Vector3()
 var bValidPlacingPosition: bool = false;
 
+@onready var PlaceAudioPlayer: AudioStreamPlayer = $"../PlaceItemAudioPlayer"
 @onready var AssetSelector: TableAssetSelectorScript = $"../UI/ColorRect/VBoxContainer/TabAssetSelector"
 
 var hasCurrentSelectedAsset = false
 var currentSelectedAsset: Resource
+
+signal ObjectPlaced
 
 const DegToRad = 0.0174533
 
@@ -17,8 +20,12 @@ const DegToRad = 0.0174533
 func _ready() -> void:
 	TargetRotation = %SpringArm3D.rotation
 	%SpringArm3D.rotation_degrees = Vector3(-89, 0, -60)
+	ObjectPlaced.connect(_on_object_placed_on_horse)
 
 	_setup_asset_selector_events(_on_asset_changed)
+
+func _on_object_placed_on_horse():
+	PlaceAudioPlayer.play()
 
 func _setup_asset_selector_events(OnSelected: Callable):
 	var script = AssetSelector as TableAssetSelectorScript
@@ -93,6 +100,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
 		
 	if event.is_action_pressed("Left_Click") && bValidPlacingPosition && hasCurrentSelectedAsset:
+		ObjectPlaced.emit()
 		var params: HorseAccessoryData = HorseAccessoryData.new()
 		params.AccessoryResource = currentSelectedAsset
 		params.AccessoryTransform = %cursorobj.global_transform

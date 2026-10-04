@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="2_xcrvh"]
 [ext_resource type="PackedScene" uid="uid://wphnss3bggw7" path="res://GameObjects/PlinkoRod.tscn" id="4_xqfex"]
 [ext_resource type="Material" uid="uid://dhoectrgbak70" path="res://Materials/Environment/lightstrip.tres" id="5_2qx7b"]
+[ext_resource type="AudioStream" uid="uid://bxcuvintv2mlw" path="res://Audio/plinko song loopablae.wav" id="6_vnlsd"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 glow_enabled = true
@@ -356,3 +357,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.852607, 15.529817, -2.121
 material_override = ExtResource("5_2qx7b")
 use_collision = true
 size = Vector3(0.1328125, 31.27588, 1.1181641)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1293244458]
+stream = ExtResource("6_vnlsd")
+autoplay = true
