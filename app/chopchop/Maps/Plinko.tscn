@@ -49,7 +49,7 @@ visible = false
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=645152459]
-transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 20.438911, 1.572578, -0.011930466)
+transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 20.438911, -0.07611227, -0.011930466)
 use_collision = true
 material = SubResource("StandardMaterial3D_3qq0r")
 
