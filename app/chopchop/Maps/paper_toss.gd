@@ -35,7 +35,3 @@ func _ResetHorse() -> void:
 		var instance = scene.instantiate()
 		instance._set_score(total_score)
 		add_child(instance)
-	await get_tree().create_timer(1.5).timeout
-	Horse._reset()
-	var RandomNumber = randf_range(-10.0, 10.0)
-	Bin.set_position(Vector3(RandomNumber, CurrentPosition.y, CurrentPosition.z))
