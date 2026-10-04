@@ -6,6 +6,5 @@
 [node name="eggProp" type="Node3D" unique_id=1630059133]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1297512148]
-transform = Transform3D(-30, 4.371139e-07, 0, -2.6226833e-06, -5, 0, 0, 0, 30, 0, 0, 0)
 mesh = ExtResource("1_6leqk")
 surface_material_override/0 = ExtResource("2_4ee8d")

@@ -6,6 +6,5 @@
 [node name="SheriffBadgeProp" type="Node3D" unique_id=1380289912]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=127276040]
-transform = Transform3D(40, 0, 0, 0, 2, 0, 0, 0, 40, 0, 0, 0)
 mesh = ExtResource("1_tw5n7")
 surface_material_override/0 = ExtResource("2_aobhk")

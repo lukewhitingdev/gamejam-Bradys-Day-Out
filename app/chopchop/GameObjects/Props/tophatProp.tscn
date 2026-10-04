@@ -6,6 +6,5 @@
 [node name="TophatProp" type="Node3D" unique_id=1277161306]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=47318846]
-transform = Transform3D(20, 0, 0, 0, 4, 0, 0, 0, 20, 0, 0, 0)
 mesh = ExtResource("1_m47th")
 surface_material_override/0 = ExtResource("2_grctg")
