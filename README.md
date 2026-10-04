@@ -8,6 +8,7 @@ Quit doesn't work on web version, to quit just press back button in browser.
 Loading on web version is pretty slow, give it some time in between scene changes (its not crashed)
 
 
+## Details
 Theme is horse
 
 Team Chop Chop:
