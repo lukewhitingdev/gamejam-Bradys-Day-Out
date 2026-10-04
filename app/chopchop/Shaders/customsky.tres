@@ -1,0 +1,25 @@
+[gd_resource type="VisualShader" format=3 uid="uid://cesm1ja3368y8"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_jn02h"]
+source = 5
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ftbm7"]
+input_name = "sky_coords"
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_cqq25"]
+parameter_name = "Texture2DParameter"
+
+[resource]
+mode = 3
+flags/use_half_res_pass = false
+flags/use_quarter_res_pass = false
+flags/disable_fog = false
+flags/use_debanding = false
+nodes/sky/0/position = Vector2(780, 200)
+nodes/sky/2/node = SubResource("VisualShaderNodeTexture_jn02h")
+nodes/sky/2/position = Vector2(520, 220)
+nodes/sky/3/node = SubResource("VisualShaderNodeInput_ftbm7")
+nodes/sky/3/position = Vector2(140, 160)
+nodes/sky/4/node = SubResource("VisualShaderNodeTexture2DParameter_cqq25")
+nodes/sky/4/position = Vector2(120, 320)
+nodes/sky/connections = PackedInt32Array(2, 0, 0, 0, 3, 0, 2, 0, 4, 0, 2, 2)

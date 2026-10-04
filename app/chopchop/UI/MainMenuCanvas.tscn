@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ld10s1rtvfof"]
 
 [ext_resource type="Script" uid="uid://djw6u2q84etgi" path="res://UI/main_menu_canvas.gd" id="1_0o1g8"]
+[ext_resource type="Script" uid="uid://bnbekol7giqqt" path="res://UI/exit_button.gd" id="2_3h7ld"]
 
 [node name="MainMenuCanvas" type="CanvasLayer" unique_id=744911691]
 script = ExtResource("1_0o1g8")
@@ -56,6 +57,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 38
 text = "Exit"
+script = ExtResource("2_3h7ld")
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="gui_input" from="VBoxContainer/ExitButton" to="VBoxContainer/ExitButton" method="_on_gui_input"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

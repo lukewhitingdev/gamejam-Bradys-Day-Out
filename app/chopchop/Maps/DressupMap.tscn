@@ -30,22 +30,39 @@
 [ext_resource type="Texture2D" uid="uid://dvnqe2ic21ii3" path="res://UI/PropThumbnails/glassesthumb.png" id="25_kmkpc"]
 [ext_resource type="Texture2D" uid="uid://cuegyr7ix2xei" path="res://UI/PropThumbnails/tophatthumb.png" id="27_m30a4"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
+[sub_resource type="Gradient" id="Gradient_yt8x4"]
+offsets = PackedFloat32Array(0.38157895, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.95394737, 0.95394737, 0.95394737, 0.95394737)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k3c1r"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_denls"]
+noise = SubResource("FastNoiseLite_k3c1r")
+color_ramp = SubResource("Gradient_yt8x4")
+seamless = true
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3qq0r"]
+sky_top_color = Color(0.26779845, 0.48019117, 0.6197678, 1)
+sky_horizon_color = Color(0.8891019, 0.91685, 0.9418802, 1)
+sky_cover = SubResource("NoiseTexture2D_denls")
+ground_bottom_color = Color(0.3137255, 0.4745098, 0.3019608, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Sky" id="Sky_r8qcy"]
-sky_material = SubResource("ProceduralSkyMaterial_7dwbp")
+sky_material = SubResource("ProceduralSkyMaterial_3qq0r")
 
 [sub_resource type="Environment" id="Environment_h66jr"]
 background_mode = 2
 sky = SubResource("Sky_r8qcy")
 ambient_light_source = 3
-ambient_light_color = Color(0.8862745, 0.58431375, 0.64705884, 1)
+ambient_light_color = Color(0.38161805, 0.758266, 0.722315, 1)
 fog_light_color = Color(0.5807576, 0.5807576, 0.5807576, 1)
 fog_sky_affect = 0.0
 fog_height_density = 3.1386
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h66jr"]
-albedo_color = Color(0, 0.14025977, 0, 1)
+albedo_color = Color(0.17449743, 0.27525806, 0.16371045, 1)
 
 [sub_resource type="Resource" id="Resource_d3pcb"]
 script = ExtResource("4_ye5xf")
