@@ -1,8 +1,8 @@
-Game created in 48hrs for Wholesome Game Jam 2026
+# Game created in 48hrs for Wholesome Game Jam 2026
 
 Made in godot
 
-NOTES:
+## NOTES:
 Quit doesn't work on web version, to quit just press back button in browser.
 
 Loading on web version is pretty slow, give it some time in between scene changes (its not crashed)
