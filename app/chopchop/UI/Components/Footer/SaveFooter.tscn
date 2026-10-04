@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7lpsxll2yxqj" path="res://UI/Components/Footer/Script/SaveFooterVersionGenerator.gd" id="1_cm3yt"]
 [ext_resource type="Script" uid="uid://c8duwubntkob" path="res://UI/Components/Footer/save_footer.gd" id="1_r10ni"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="3_07xd2"]
 
 [node name="SaveFooter" type="HBoxContainer" unique_id=610904564]
 anchors_preset = 12
@@ -53,6 +54,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Undo
 "
+
+[node name="ClickStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=418516526]
+stream = ExtResource("3_07xd2")
+volume_db = -21.641
 
 [connection signal="folding_changed" from="FoldableContainer" to="." method="_on_foldable_container_folding_changed"]
 [connection signal="gui_input" from="RichTextLabel" to="RichTextLabel" method="_on_gui_input"]
