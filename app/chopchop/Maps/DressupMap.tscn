@@ -154,11 +154,13 @@ color = Color(0.11415807, 0.11415809, 0.11415807, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect" unique_id=494467980]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -208.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -170,8 +172,9 @@ size_flags_vertical = 10
 Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResource("Resource_2spav"), SubResource("Resource_q56ad"), SubResource("Resource_msrnv"), SubResource("Resource_e12o6"), SubResource("Resource_ul1a7"), SubResource("Resource_7t57g"), SubResource("Resource_q2xwe"), SubResource("Resource_pj3nd"), SubResource("Resource_yu4qx"), SubResource("Resource_n7jug"), SubResource("Resource_ngluk")])
 
 [node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
-custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]
