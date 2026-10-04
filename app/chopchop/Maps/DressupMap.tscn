@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://c0tyqs6ircmle" path="res://Maps/Plinko.tscn" id="30_bfgaf"]
 [ext_resource type="PackedScene" uid="uid://i8c6b14eerb6" path="res://GameObjects/Environment/grass.tscn" id="30_tnpur"]
 [ext_resource type="AudioStream" uid="uid://blk8sa115wtbl" path="res://Audio/dressup loop.wav" id="32_mitln"]
-[ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="34_r7jga"]
+[ext_resource type="AudioStream" uid="uid://dfpymdshnsjxd" path="res://Audio/placement pop.wav" id="34_r7jga"]
 
 [sub_resource type="Gradient" id="Gradient_yt8x4"]
 offsets = PackedFloat32Array(0.38157895, 1)
@@ -283,7 +283,7 @@ autoplay = true
 
 [node name="PlaceItemAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=857049907]
 stream = ExtResource("34_r7jga")
-volume_db = -11.71
+volume_db = -27.902
 
 [connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]
