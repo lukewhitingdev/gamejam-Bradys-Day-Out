@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://c216im41bysuq" path="res://UI/PropThumbnails/sherriffthumb.png" id="23_mcfil"]
 [ext_resource type="Texture2D" uid="uid://dvnqe2ic21ii3" path="res://UI/PropThumbnails/glassesthumb.png" id="25_kmkpc"]
 [ext_resource type="Texture2D" uid="uid://cuegyr7ix2xei" path="res://UI/PropThumbnails/tophatthumb.png" id="27_m30a4"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="29_8hsfj"]
 [ext_resource type="PackedScene" uid="uid://c0tyqs6ircmle" path="res://Maps/Plinko.tscn" id="30_bfgaf"]
 [ext_resource type="PackedScene" uid="uid://i8c6b14eerb6" path="res://GameObjects/Environment/grass.tscn" id="30_tnpur"]
 [ext_resource type="AudioStream" uid="uid://blk8sa115wtbl" path="res://Audio/dressup loop.wav" id="32_mitln"]
@@ -215,6 +216,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 10
 Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResource("Resource_2spav"), SubResource("Resource_q56ad"), SubResource("Resource_msrnv"), SubResource("Resource_e12o6"), SubResource("Resource_ul1a7"), SubResource("Resource_7t57g"), SubResource("Resource_q2xwe"), SubResource("Resource_pj3nd"), SubResource("Resource_yu4qx"), SubResource("Resource_n7jug"), SubResource("Resource_ngluk")])
+
+[node name="ClickStreamPlayer" type="AudioStreamPlayer" parent="UI/ColorRect/VBoxContainer/TabAssetSelector" unique_id=1336975662]
+stream = ExtResource("29_8hsfj")
+volume_db = -21.641
 
 [node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 layout_mode = 2
