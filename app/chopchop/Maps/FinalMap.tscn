@@ -91,6 +91,7 @@ volume_db = -33.475
 [node name="UI" type="CanvasLayer" parent="." unique_id=1727545296]
 
 [node name="Control" type="Control" parent="UI" unique_id=1180333026]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
