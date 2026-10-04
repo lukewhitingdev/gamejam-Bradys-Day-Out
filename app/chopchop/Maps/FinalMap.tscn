@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://inahlyobeq4y"]
+
+[ext_resource type="Script" uid="uid://bf10g74v8tyc5" path="res://Maps/final_map_manager.gd" id="1_3l6nh"]
+[ext_resource type="Material" uid="uid://ccu0hmp6f6vcg" path="res://Materials/Horse/horsemat.tres" id="2_lofwt"]
+[ext_resource type="Script" uid="uid://bk4yet0h4ldy4" path="res://Maps/tween_marker.gd" id="3_n23oh"]
+[ext_resource type="AudioStream" uid="uid://7sncltn6qthe" path="res://Audio/Victory sound 3.wav" id="4_iqajh"]
+[ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="5_f8hj6"]
+[ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="6_ia83l"]
+[ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="7_sf5he"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_itnuj"]
+
+[node name="FinalMap" type="Node3D" unique_id=459672555 node_paths=PackedStringArray("lookAtTarget")]
+script = ExtResource("1_3l6nh")
+lookAtTarget = NodePath("PlayerHorse")
+transitionLerp = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2115282408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9096345, 3.8369653)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=187705641]
+transform = Transform3D(1, 0, 0, 0, 0.7154609, 0.69865274, 0, -0.69865274, 0.7154609, 0, 2.4140344, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1685444198]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D" unique_id=1909743767]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+material = ExtResource("2_lofwt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2012574587]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("BoxShape3D_itnuj")
+
+[node name="Camera_Tween_Nodes" type="Node" parent="." unique_id=398804758]
+
+[node name="Marker3D" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=461329980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7636781, 2.1245167, 1.5265146)
+script = ExtResource("3_n23oh")
+cameraFov = 120.0
+positionTweenSpeed = 0.2
+fovTweenSpeed = 0.05
+
+[node name="Marker3D2" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=128794046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9046967, 1.8481909, -0.4871924)
+script = ExtResource("3_n23oh")
+positionTweenSpeed = 0.2
+fovTweenSpeed = 0.2
+tweenType = 1
+
+[node name="Marker3D3" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=2019127307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2207665, 2.047372, -0.6942031)
+script = ExtResource("3_n23oh")
+positionTweenSpeed = 0.2
+tweenType = 2
+
+[node name="Marker3D4" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=1090325973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8053827, 2.0955148, 1.001173)
+script = ExtResource("3_n23oh")
+positionTweenSpeed = 0.2
+fovTweenSpeed = 0.1
+tweenType = 2
+
+[node name="Marker3D5" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=146762016]
+transform = Transform3D(0.99689484, 0, 0.07874442, 0, 1, 0, -0.07874442, 0, 0.99689484, 3.08804, 2.6586137, 3.7690778)
+script = ExtResource("3_n23oh")
+cameraFov = 20.0
+positionTweenSpeed = 0.2
+fovTweenSpeed = 0.1
+
+[node name="Marker3D6" type="Marker3D" parent="Camera_Tween_Nodes" unique_id=664875309]
+transform = Transform3D(0.99689484, 0, 0.07874442, 0, 1, 0, -0.07874442, 0, 0.99689484, 4.652521, 3.4312925, 4.334277)
+script = ExtResource("3_n23oh")
+cameraFov = 40.0
+positionTweenSpeed = 0.2
+fovTweenSpeed = 0.1
+isFinalMarker = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1115905042]
+autostart = true
+
+[node name="CelebrationPlayer" type="AudioStreamPlayer" parent="." unique_id=1491840269]
+stream = ExtResource("4_iqajh")
+volume_db = -8.618
+
+[node name="VineBoomPlayer" type="AudioStreamPlayer" parent="." unique_id=968530500]
+stream = ExtResource("5_f8hj6")
+volume_db = -80.0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1727545296]
+
+[node name="PanelContainer" type="PanelContainer" parent="UI" unique_id=1495151689]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 139.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PanelContainer" unique_id=272872079]
+layout_mode = 2
+
+[node name="ScoreLabel" type="RichTextLabel" parent="UI/PanelContainer/VBoxContainer" unique_id=1268958690]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "[wave] [rainbow] You Win"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/PanelContainer/VBoxContainer" unique_id=869348344]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "Score: [tornado] 123"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerHorse" parent="." unique_id=1785070167 instance=ExtResource("6_ia83l")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 1.4685198, 0)
+script = ExtResource("7_sf5he")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
