@@ -4,6 +4,31 @@
 [ext_resource type="AudioStream" uid="uid://cu3furm2syuph" path="res://Audio/Horse game menu (final).wav" id="2_2gj0u"]
 [ext_resource type="PackedScene" uid="uid://cbhx8i1ra5v3h" path="res://Models/horse.tscn" id="3_cixre"]
 
+[sub_resource type="Gradient" id="Gradient_7thxo"]
+colors = PackedColorArray(0.8980392, 0.6627451, 0.3529412, 1, 0.59891987, 0.2748854, 0.5987709, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ksn3p"]
+noise_type = 2
+frequency = 0.0233
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c3h6f"]
+noise = SubResource("FastNoiseLite_ksn3p")
+color_ramp = SubResource("Gradient_7thxo")
+seamless = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cixre"]
+panorama = SubResource("NoiseTexture2D_c3h6f")
+
+[sub_resource type="Sky" id="Sky_j2i6j"]
+sky_material = SubResource("PanoramaSkyMaterial_cixre")
+
+[sub_resource type="Environment" id="Environment_5divm"]
+background_mode = 2
+sky = SubResource("Sky_j2i6j")
+ambient_light_source = 3
+ambient_light_color = Color(0.49537063, 0.45331496, 0.6121227, 1)
+ambient_light_energy = 1.1
+
 [node name="MainMenuMap" type="Node3D" unique_id=1474193702]
 
 [node name="MainMenuCanvas" parent="." unique_id=744911691 instance=ExtResource("1_54vni")]
@@ -21,3 +46,8 @@ fov = 40.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1349650178]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21121708, 1.3559698)
+light_energy = 0.501
+light_indirect_energy = 0.501
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=389914728]
+environment = SubResource("Environment_5divm")
