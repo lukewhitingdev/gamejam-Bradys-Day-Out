@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bfvpc7bvnn5g4" path="res://GameObjects/PaperTossHorse.tscn" id="1_4g1hd"]
 [ext_resource type="Script" uid="uid://d016f84uksni7" path="res://Maps/paper_toss.gd" id="1_a5irk"]
-[ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="1_ar6bx"]
 [ext_resource type="PackedScene" uid="uid://c8m6ofnemq81q" path="res://GameObjects/paper_toss_reset.tscn" id="4_imv7t"]
 [ext_resource type="Script" uid="uid://od6v1e0dtgat" path="res://Maps/paper_toss_throw_progress_bar.gd" id="5_5kxta"]
+[ext_resource type="PackedScene" uid="uid://c1pqfq6657opo" path="res://GameObjects/PaperTossBin.tscn" id="5_7vvsj"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 
@@ -39,10 +39,6 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19333589, -0.5884664, 4.684843)
 BeginCameraPosition = Vector3(0, 0, 10)
 
-[node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("1_ar6bx")]
-transform = Transform3D(3.020395, 0, 0, 0, 1.6453232, 0, 0, 0, 2.2561955, 5.4685464, -4.578881, -1.2807341)
-Score = 1
-
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
 transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.2672424, -5.579458, -2.1354332)
 
@@ -70,3 +66,6 @@ rotation = 0.0013916706
 fill_mode = 3
 script = ExtResource("5_5kxta")
 maxVelo = 2000
+
+[node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
+transform = Transform3D(2.575, 0, 0, 0, 2.575, 0, 0, 0, 2.575, 7.6612744, -4.640275, -0.76033306)

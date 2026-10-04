@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6p5y0pfpth06"]
+
+[ext_resource type="PackedScene" uid="uid://cvpdjl37x7tyh" path="res://Models/bin.fbx" id="1_7hgs6"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_i1kon"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m8rb3"]
+albedo_texture = ExtResource("2_i1kon")
+
+[node name="bin" unique_id=859928252 instance=ExtResource("1_7hgs6")]
+
+[node name="bin" parent="." index="0" unique_id=2025865680]
+material_override = SubResource("StandardMaterial3D_m8rb3")
