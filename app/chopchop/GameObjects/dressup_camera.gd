@@ -11,6 +11,8 @@ var currentSelectedAsset: Resource
 
 const DegToRad = 0.0174533
 
+@onready var ChildHorseNode: Node3D = %Horse.get_node("%thishorserighthere")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	TargetRotation = %SpringArm3D.rotation
@@ -80,11 +82,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
 		
 	if event.is_action_pressed("Left_Click") && bValidPlacingPosition && hasCurrentSelectedAsset:
-		var scene = currentSelectedAsset
-		var instance = scene.instantiate()
-		%Horse.add_child(instance)
+		#var scene = currentSelectedAsset
+		#var instance = scene.instantiate()
+		#%Horse.add_child(instance)
 		var params: HorseAccessoryData = HorseAccessoryData.new()
-		params.AccessoryPath = "res://Models/horse.tscn"
+		params.AccessoryPath = currentSelectedAsset.resource_path
 		params.AccessoryTransform = %cursorobj.global_transform
-		%Horse._add_accessory(params)
+		ChildHorseNode._add_accessory(params)
 		

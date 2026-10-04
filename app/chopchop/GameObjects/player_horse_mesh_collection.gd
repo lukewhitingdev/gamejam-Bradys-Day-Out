@@ -26,7 +26,7 @@ func _add_accessory(Data: HorseAccessoryData) -> void:
 	AddedHorseAccessories.push_back(Data)
 	var scene = load(Data.AccessoryPath)
 	var instance = scene.instantiate()
-	%thishorserighthere.add_child(instance)
+	add_child(instance)
 	instance.global_transform = Data.AccessoryTransform
 	AddedHorseAccessoriesNodes.push_back(instance)
 

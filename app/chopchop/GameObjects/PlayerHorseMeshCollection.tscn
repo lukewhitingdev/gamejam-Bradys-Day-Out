@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="1_apiw7"]
 
 [node name="Node3D" type="Node3D" unique_id=1159776203]
-script = ExtResource("1_apiw7")
 
 [node name="thishorserighthere" parent="." unique_id=1785070167 instance=ExtResource("1_1a170")]
 unique_name_in_owner = true
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+script = ExtResource("1_apiw7")
