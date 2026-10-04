@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhsbwph2nr33v"]
 
 [ext_resource type="Script" uid="uid://dovmr263g413g" path="res://UI/paper_toss_finished_ui.gd" id="1_5rjhu"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="2_kcqbc"]
 
 [node name="Control" type="Control" unique_id=1092030268]
 layout_mode = 3
@@ -45,5 +46,9 @@ theme_override_font_sizes/normal_font_size = 29
 bbcode_enabled = true
 text = "[tornado]Score: ########"
 horizontal_alignment = 1
+
+[node name="MouseClickStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=492852191]
+stream = ExtResource("2_kcqbc")
+volume_db = -23.734
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
