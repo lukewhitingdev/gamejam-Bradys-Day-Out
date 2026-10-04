@@ -11,6 +11,18 @@
 
 [sub_resource type="Compositor" id="Compositor_b1lj4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qq0r"]
+albedo_color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqq25"]
+albedo_color = Color(0.06879827, 0.06879828, 0.06879828, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jn02h"]
+albedo_color = Color(0.06879827, 0.06879828, 0.06879828, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ftbm7"]
+albedo_color = Color(0.080783345, 0.080783345, 0.080783345, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqfex"]
 albedo_color = Color(0.7080693, 0.084611855, 0.24472287, 1)
 
@@ -37,20 +49,24 @@ visible = false
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=645152459]
-transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 5.7732267, -5.103783, 2.1967869)
+transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 20.438911, 1.572578, -0.011930466)
 use_collision = true
+material = SubResource("StandardMaterial3D_3qq0r")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1495527021]
 transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, -12.452592, -5.074761, 2.1946297)
 use_collision = true
+material = SubResource("StandardMaterial3D_cqq25")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1294853535]
-transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.85487, -5.103783, -3.1354332)
+transform = Transform3D(3.2366034e-13, -4.371139e-08, -138.72176, -169.39488, -4.371139e-08, 0, -7.4044856e-06, 1, -6.0637203e-06, 17.908009, -5.3503137, -3.081379)
 use_collision = true
+material = SubResource("StandardMaterial3D_jn02h")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1511665687]
-transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, 23.69794, -5.103783, 2.1967869)
+transform = Transform3D(-7.4044856e-06, 1, 0, -169.39488, -4.371139e-08, 0, 0, 0, 138.72176, 23.169235, -3.5621123, 1.8678303)
 use_collision = true
+material = SubResource("StandardMaterial3D_ftbm7")
 
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("2_xcrvh")]
 transform = Transform3D(5.050726, 0, 0, 0, 2.9505749, 0, 0, 0, 4.6630826, -1.6203456, 0, 0)
@@ -315,10 +331,11 @@ HitSpeedRange = Vector2(10, 15)
 RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1837485846]
-transform = Transform3D(1, 0, 0, 0, 0.9986993, 0.050985627, 0, -0.050985627, 0.9986993, 6.8445625, 18.393515, 19.947445)
+transform = Transform3D(0.99949116, 0.0020531998, -0.031831037, -1.6586276e-09, 0.9979262, 0.06436927, 0.03189719, -0.064336516, 0.9974185, 6.8445625, 19.055593, 20.36128)
 light_color = Color(0.8605143, 0.7015325, 0.8725342, 1)
 light_energy = 1.255
 light_volumetric_fog_energy = 1.74
 shadow_enabled = true
+shadow_opacity = 0.67
 shadow_blur = 6.607
 sky_mode = 1
