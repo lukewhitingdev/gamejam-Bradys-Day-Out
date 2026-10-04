@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://coabh5afe2ut4"]
 
 [ext_resource type="PackedScene" uid="uid://duaaacuu27dlc" path="res://GameObjects/DressupCamera.tscn" id="1_w1bt5"]
+[ext_resource type="Script" uid="uid://cltw60e2a8w1d" path="res://Maps/DressUpMapColorRect.gd" id="2_an2ts"]
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
 [ext_resource type="PackedScene" uid="uid://bytlfirejfd70" path="res://GameObjects/Props/angelWingProp.tscn" id="4_0pwnk"]
 [ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
@@ -154,14 +155,14 @@ material = SubResource("StandardMaterial3D_h66jr")
 
 [node name="ColorRect" type="ColorRect" parent="UI" unique_id=1235380660]
 custom_minimum_size = Vector2(0, 30)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -207.0
+offset_left = 4.0
+offset_top = 268.0
+offset_right = 636.0
+offset_bottom = 476.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.11415807, 0.11415809, 0.11415807, 1)
+script = ExtResource("2_an2ts")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ColorRect" unique_id=494467980]
 layout_mode = 1
@@ -185,7 +186,6 @@ Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResourc
 [node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]

@@ -27,11 +27,6 @@ func _on_plinko_scored(score: int):
 
 func _reset_horse():
 	print("reseting horse")
-	plinko_horse.HasGameStarted = false
-
-	plinko_horse.gravity_scale = 0.0
-	plinko_horse.angular_velocity = Vector3.ZERO
-	plinko_horse.set_linear_velocity(Vector3.ZERO)
-
+	plinko_horse._reset_horse()
 	plinko_horse.set_global_position(horse_spawn.position)
 	plinko_horse.set_global_rotation(horse_spawn.rotation)

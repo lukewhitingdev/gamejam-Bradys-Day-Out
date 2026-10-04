@@ -1,4 +1,6 @@
 extends Node
+
+const MaxAccessoriesCount: int = 20
 	
 var HorseAccessories: Array[HorseAccessoryData]
 
