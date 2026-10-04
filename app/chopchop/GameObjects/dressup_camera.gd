@@ -76,6 +76,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		bMouseLook = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
+	if event.is_pressed():
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			%SpringArm3D.spring_length -= 0.3
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			%SpringArm3D.spring_length += 0.3
+			
+	%SpringArm3D.spring_length = clamp(%SpringArm3D.spring_length, 2, 10)
+		
 	if event is InputEventMouseMotion && bMouseLook:
 		TargetRotation.y -= event.relative.x * 0.3 * DegToRad
 		TargetRotation.x -= event.relative.y * 0.3 * DegToRad
