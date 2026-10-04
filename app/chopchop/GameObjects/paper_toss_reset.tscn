@@ -6,6 +6,16 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_13qdw"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1pxqc"]
+frequency = 0.2751
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rgb5j"]
+noise = SubResource("FastNoiseLite_1pxqc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckyqm"]
+albedo_color = Color(0.11716793, 0.023372503, 0.015951933, 1)
+albedo_texture = SubResource("NoiseTexture2D_rgb5j")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_b1lj4"]
@@ -23,6 +33,7 @@ shape = SubResource("BoxShape3D_xrivr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/Area3D/CollisionShape3D" unique_id=673859755]
 mesh = SubResource("BoxMesh_13qdw")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckyqm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=720886910]
 shape = SubResource("BoxShape3D_13qdw")

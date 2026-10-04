@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dfc55gmhp2c3v"]
+
+[ext_resource type="PackedScene" uid="uid://boysuush4edwv" path="res://Models/fan.fbx" id="1_vjbjm"]
+[ext_resource type="Texture2D" uid="uid://cegp2lbxxjpnn" path="res://Materials/Props/officeprops_officeprop_BaseColor_sRGB.png" id="2_ovodi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_by32q"]
+albedo_texture = ExtResource("2_ovodi")
+
+[node name="fan" unique_id=378747184 instance=ExtResource("1_vjbjm")]
+
+[node name="fan" parent="." index="0" unique_id=512004771]
+material_override = SubResource("StandardMaterial3D_by32q")
