@@ -32,6 +32,7 @@ func _OnScore(_score) -> void:
 
 	lastShotWasIn = true
 	total_score += _score
+	GlobalScore._add_score(_score)
 	_ResetHorse()
 
 func _ResetHorse() -> void:

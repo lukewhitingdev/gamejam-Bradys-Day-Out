@@ -4,7 +4,7 @@ extends Node3D
 @onready var tweenNodeParent = $Camera_Tween_Nodes
 @onready var vineBoomPlayer: AudioStreamPlayer = $VineBoomPlayer
 @onready var celebrationPlayer: AudioStreamPlayer = $CelebrationPlayer
-
+@onready var ScoreText = $UI/Control/VBoxContainer/RichTextLabel
 @onready var celebrationUI: Control = $UI/Control
 
 @export var lookAtTarget: Node3D
@@ -30,6 +30,8 @@ func _ready():
 
 	OnCameraTransiton.connect(_on_camera_transition)
 	OnCameraTransitionsFinish.connect(_on_camera_transition_finish)
+	
+	ScoreText.text = str("Score = ", GlobalScore.TotalScore)
 	
 func _on_camera_transition():
 	vineBoomPlayer.play()

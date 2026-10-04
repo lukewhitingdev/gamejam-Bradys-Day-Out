@@ -40,6 +40,7 @@ func _setup_events(items: Array[PlinkoCup]):
 func _on_plinko_scored(score: float):
 	print("Updated score to ", score, " multiplier = ", multiplier)
 	total_score += (score * multiplier)
+	GlobalScore._add_score(total_score)
 	hud_instance._set_score(total_score)
 	await get_tree().create_timer(1.5).timeout
 	_reset_horse() 
