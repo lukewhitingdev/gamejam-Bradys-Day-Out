@@ -11,6 +11,18 @@
 
 [sub_resource type="Compositor" id="Compositor_b1lj4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xqfex"]
+albedo_color = Color(0.7080693, 0.084611855, 0.24472287, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qx7b"]
+albedo_color = Color(0.277489, 0.4435412, 2.8878452e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnlsd"]
+albedo_color = Color(0.659768, 0.662866, 0.05657641, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_piyvj"]
+albedo_color = Color(0.64843154, 0.23468846, 0, 1)
+
 [node name="Plinko" type="Node3D" unique_id=178533814]
 script = ExtResource("1_vimka")
 
@@ -91,74 +103,92 @@ HitSpeedRange = Vector2(10, 15)
 [node name="PlinkoRod6" parent="Node3D" unique_id=11184679 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 20.677912, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod7" parent="Node3D" unique_id=1458343827 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 16.677912, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod8" parent="Node3D" unique_id=1268843247 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 12.677912, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod9" parent="Node3D" unique_id=231044941 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 8.677912, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod10" parent="Node3D" unique_id=1357741110 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 6.6779118, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod23" parent="Node3D" unique_id=1949849039 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 10.677912, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod24" parent="Node3D" unique_id=87236887 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 14.677912, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod25" parent="Node3D" unique_id=109520685 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 18.677912, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod26" parent="Node3D" unique_id=1835298085 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 22.677912, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod27" parent="Node3D" unique_id=1172758455 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 20.677912, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod28" parent="Node3D" unique_id=1726645744 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 16.677912, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod29" parent="Node3D" unique_id=1497124527 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 12.677912, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod37" parent="Node3D" unique_id=1054893574 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 10.677912, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod41" parent="Node3D" unique_id=533387450 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 6.6779118, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod42" parent="Node3D" unique_id=181342230 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 2.6779118, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod43" parent="Node3D" unique_id=760242337 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -1.3220882, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod44" parent="Node3D" unique_id=1049396047 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -5.3220882, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod45" parent="Node3D" unique_id=1517772951 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -9.322088, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod46" parent="Node3D" unique_id=770635974 instance=ExtResource("4_xqfex")]
 transform = Transform3D(1.279928, 0, 0, 0, -1.7914172e-07, -1.0447005, 0, 4.098285, -4.5665306e-08, -5.3220882, 2.9533577, -2.1354332)
@@ -179,46 +209,57 @@ HitSpeedRange = Vector2(10, 15)
 [node name="PlinkoRod38" parent="Node3D" unique_id=1437630747 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 14.677912, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod39" parent="Node3D" unique_id=2067864738 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 18.677912, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod40" parent="Node3D" unique_id=1916665480 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 22.677912, 6.9533577, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_piyvj")
 
 [node name="PlinkoRod30" parent="Node3D" unique_id=38845496 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 8.677912, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod31" parent="Node3D" unique_id=2047917665 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 4.6779118, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod32" parent="Node3D" unique_id=236163718 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 0.67791176, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod33" parent="Node3D" unique_id=989785586 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -3.3220882, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod34" parent="Node3D" unique_id=1478831785 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -7.3220882, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod35" parent="Node3D" unique_id=190672081 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -11.322088, 9.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_vnlsd")
 
 [node name="PlinkoRod11" parent="Node3D" unique_id=1259216531 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 2.6779118, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod16" parent="Node3D" unique_id=720155208 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 4.6779118, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod17" parent="Node3D" unique_id=947447983 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 2.6779118, 18.953358, -2.1354332)
@@ -239,27 +280,34 @@ HitSpeedRange = Vector2(10, 15)
 [node name="PlinkoRod12" parent="Node3D" unique_id=608457414 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, 0.67791176, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod13" parent="Node3D" unique_id=1810548716 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -5.3220882, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod22" parent="Node3D" unique_id=1734062438 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -1.3220882, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod14" parent="Node3D" unique_id=128316078 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -9.322088, 12.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_2qx7b")
 
 [node name="PlinkoRod15" parent="Node3D" unique_id=630511914 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -3.3220882, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod21" parent="Node3D" unique_id=467529996 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -7.3220882, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")
 
 [node name="PlinkoRod36" parent="Node3D" unique_id=860717496 instance=ExtResource("4_xqfex")]
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -11.322088, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
+RodMaterial = SubResource("StandardMaterial3D_xqfex")

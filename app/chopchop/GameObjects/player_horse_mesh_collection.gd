@@ -31,7 +31,7 @@ func _can_add_accessory() -> bool:
 
 func _add_accessory(Data: HorseAccessoryData) -> void:
 	if _can_add_accessory():
-		var scene = load(Data.AccessoryPath)
+		var scene = Data.AccessoryResource
 		var instance = scene.instantiate()
 		add_child(instance)
 		instance.add_to_group("Accessories")

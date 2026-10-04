@@ -35,12 +35,15 @@ func _on_asset_changed(data: GridItemData):
 		child.queue_free()
 
 	%cursorobj.add_child(node) 
+	
+func _slerp_euler_rotation(Current: Vector3, Target: Vector3, Alpha: float) -> Vector3:
+	var CurrentRotQuat: Quaternion = Quaternion.from_euler(Current)
+	var TargetRotQuat: Quaternion = Quaternion.from_euler(Target)
+	return CurrentRotQuat.slerp(TargetRotQuat, Alpha).get_euler()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var CurrentRotQuat: Quaternion = Quaternion.from_euler(%SpringArm3D.rotation)
-	var TargetRotQuat: Quaternion = Quaternion.from_euler(TargetRotation)
-	%SpringArm3D.rotation = CurrentRotQuat.slerp(TargetRotQuat, (1 - delta) * 0.075).get_euler()
+	%SpringArm3D.rotation = _slerp_euler_rotation(%SpringArm3D.rotation, TargetRotation, (1 - delta) * 0.075)
 	%SpringArm3D.rotation.z = 0.0
 	
 	if(!bMouseLook):
@@ -91,7 +94,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("Left_Click") && bValidPlacingPosition && hasCurrentSelectedAsset:
 		var params: HorseAccessoryData = HorseAccessoryData.new()
-		params.AccessoryPath = currentSelectedAsset.resource_path
+		params.AccessoryResource = currentSelectedAsset
 		params.AccessoryTransform = %cursorobj.global_transform
 		ChildHorseNode._add_accessory(params)
 		
