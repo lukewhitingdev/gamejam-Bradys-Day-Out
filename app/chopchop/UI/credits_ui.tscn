@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://ceo1vtlk5qg40"]
+
+[ext_resource type="Script" uid="uid://0nvls88uw6pp" path="res://UI/credits_ui.gd" id="1_oyl5k"]
+
+[node name="Control" type="Control" unique_id=1092030268]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyl5k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1893822282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09239707, 0.09239706, 0.09239706, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=269458251]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -152.0
+offset_right = 272.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1586499215]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/normal_font_size = 29
+bbcode_enabled = true
+text = "[font size=16] Created in 48 hours for the Wholesome Games Game Jam 2026
+[/font][font size=24]
+Chop Chop
+[/font][font size=12]Team Members
+[/font][font size=12]
+@Kobliod - [color=light_green]Game Design[/color]
+@sof - [color=indian_red]Art[/color]
+@Panda - [color=medium_orchid]Programming[/color]
+@Gametrain - [color=medium_orchid]Programming[/color]
+@Nasser - [color=medium_orchid]Programming[/color]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=3834720]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=446315197]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
