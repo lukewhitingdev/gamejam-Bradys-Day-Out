@@ -22,4 +22,4 @@ func _generate_version():
 	var rc = rng.randi_range(0, 5)
 	var richTextLabel: RichTextLabel = self
 
-	richTextLabel.text = "Horse Visualizer v %d.%d.%drc%d" % [major, minor, bugfix, rc]
+	richTextLabel.text = "Horse Visualizer v%d.%d.%drc%d" % [major, minor, bugfix, rc]
