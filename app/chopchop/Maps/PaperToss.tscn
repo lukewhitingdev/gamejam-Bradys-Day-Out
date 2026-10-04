@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d016f84uksni7" path="res://Maps/paper_toss.gd" id="1_a5irk"]
 [ext_resource type="PackedScene" uid="uid://bcqaxobqrssin" path="res://GameObjects/PlinkoCup.tscn" id="1_ar6bx"]
 [ext_resource type="PackedScene" uid="uid://c8m6ofnemq81q" path="res://GameObjects/paper_toss_reset.tscn" id="4_imv7t"]
+[ext_resource type="Script" uid="uid://od6v1e0dtgat" path="res://Maps/paper_toss_throw_progress_bar.gd" id="5_5kxta"]
 
 [sub_resource type="Environment" id="Environment_xrivr"]
 
@@ -44,3 +45,28 @@ Score = 1
 
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
 transform = Transform3D(43.851124, 0, 0, 0, 1, 0, 0, 0, 38.225903, 5.2672424, -5.579458, -2.1354332)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1820822555]
+
+[node name="Control" type="Control" parent="UI" unique_id=1122891235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="UI/Control" unique_id=1531446707]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.0013916706
+fill_mode = 3
+script = ExtResource("5_5kxta")
+maxVelo = 2000

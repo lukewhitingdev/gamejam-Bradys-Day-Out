@@ -6,7 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://7sncltn6qthe" path="res://Audio/Victory sound 3.wav" id="4_iqajh"]
 [ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="5_f8hj6"]
 [ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="6_ia83l"]
-[ext_resource type="Script" uid="uid://bnbekol7giqqt" path="res://UI/exit_button.gd" id="6_lofwt"]
+[ext_resource type="Script" uid="uid://bg2q5a5iepybr" path="res://Maps/go_scene_button.gd" id="6_lofwt"]
+[ext_resource type="PackedScene" uid="uid://3mhi6vechsl8" path="res://Maps/MainMenuMap.tscn" id="7_n23oh"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="7_sf5he"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_itnuj"]
@@ -90,7 +91,6 @@ volume_db = -33.475
 [node name="UI" type="CanvasLayer" parent="." unique_id=1727545296]
 
 [node name="Control" type="Control" parent="UI" unique_id=1180333026]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -138,6 +138,18 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 alignment = 2
 
+[node name="MarginContainer2" type="MarginContainer" parent="UI/Control/HBoxContainer" unique_id=920650841]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="UI/Control/HBoxContainer/MarginContainer2" unique_id=1120787823]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Credits"
+script = ExtResource("6_lofwt")
+
 [node name="MarginContainer" type="MarginContainer" parent="UI/Control/HBoxContainer" unique_id=401805609]
 layout_mode = 2
 size_flags_horizontal = 8
@@ -147,12 +159,14 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
-text = "Exit"
+text = "Back to main menu"
 script = ExtResource("6_lofwt")
+targetScene = ExtResource("7_n23oh")
 
 [node name="PlayerHorse" parent="." unique_id=1785070167 instance=ExtResource("6_ia83l")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 1.4685198, 0)
 script = ExtResource("7_sf5he")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="gui_input" from="UI/Control/HBoxContainer/MarginContainer2/Button" to="UI/Control/HBoxContainer/MarginContainer2/Button" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/Control/HBoxContainer/MarginContainer/Button" to="UI/Control/HBoxContainer/MarginContainer/Button" method="_on_gui_input"]
