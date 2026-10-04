@@ -1,12 +1,14 @@
 class_name SaveFooterScript extends HBoxContainer
 
+@export var nextScene: PackedScene 
+
 signal OnFoldChanged(bool)
 
 @onready var Horse: Node3D = get_tree().get_first_node_in_group("HorseGroup")
 
 func _on_button_pressed() -> void:
 	Horse._save_horse()
-	get_tree().change_scene_to_file("res://Maps/Plinko.tscn")
+	get_tree().change_scene_to_packed(nextScene)
 
 func _on_button_2_pressed() -> void:
 	Horse._remove_last_accessory()

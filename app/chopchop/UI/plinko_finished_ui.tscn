@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b22285vhlknfj"]
+
+[ext_resource type="Script" uid="uid://f8bq5kro1cnc" path="res://UI/plinko_finished_ui.gd" id="1_tglx0"]
+
+[node name="Control" type="Control" unique_id=1092030268]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tglx0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=3834720]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 72.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=446315197]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Continue"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1586499215]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -103.0
+offset_right = 300.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 29
+text = "Score: ########"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]

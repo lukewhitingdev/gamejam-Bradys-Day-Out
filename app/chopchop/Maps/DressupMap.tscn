@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://c216im41bysuq" path="res://UI/PropThumbnails/sherriffthumb.png" id="23_mcfil"]
 [ext_resource type="Texture2D" uid="uid://dvnqe2ic21ii3" path="res://UI/PropThumbnails/glassesthumb.png" id="25_kmkpc"]
 [ext_resource type="Texture2D" uid="uid://cuegyr7ix2xei" path="res://UI/PropThumbnails/tophatthumb.png" id="27_m30a4"]
+[ext_resource type="PackedScene" uid="uid://c0tyqs6ircmle" path="res://Maps/Plinko.tscn" id="30_bfgaf"]
 [ext_resource type="PackedScene" uid="uid://i8c6b14eerb6" path="res://GameObjects/Environment/grass.tscn" id="30_tnpur"]
 
 [sub_resource type="Gradient" id="Gradient_yt8x4"]
@@ -204,6 +205,7 @@ Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResourc
 [node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 layout_mode = 2
 size_flags_horizontal = 3
+nextScene = ExtResource("30_bfgaf")
 
 [node name="grass" parent="." unique_id=274286477 instance=ExtResource("30_tnpur")]
 transform = Transform3D(30, 0, 0, 0, 44.168, 0, 0, 0, 30, 0.9084504, -0.009738326, -1.61671)

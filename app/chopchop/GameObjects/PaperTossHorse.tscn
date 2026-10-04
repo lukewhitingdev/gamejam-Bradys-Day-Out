@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfvpc7bvnn5g4"]
 
 [ext_resource type="Script" uid="uid://et2a6aigsvui" path="res://GameObjects/paper_toss_horse.gd" id="1_verj2"]
-[ext_resource type="PackedScene" uid="uid://h8ih6btjqpfd" path="res://Models/horse.fbx" id="2_4axhr"]
+[ext_resource type="PackedScene" uid="uid://cd4aro7ntpyh4" path="res://Models/Basic_horse.tscn" id="2_4axhr"]
 [ext_resource type="Script" uid="uid://c6cds0b3r0r87" path="res://GameObjects/player_horse_mesh_collection.gd" id="3_4axhr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xcrvh"]
@@ -10,8 +10,8 @@
 can_sleep = false
 script = ExtResource("1_verj2")
 
-[node name="horse" parent="." unique_id=546345079 instance=ExtResource("2_4axhr")]
-transform = Transform3D(-4.374508e-07, 0, 5.8426156, 0, 8.407569, 0, -10.007709, 0, -2.5538887e-07, 0.018257678, 0.25260353, -0.07150924)
+[node name="horse2" parent="." unique_id=1785070167 instance=ExtResource("2_4axhr")]
+transform = Transform3D(-4.3745078e-07, 0, 5.842615, 0, 8.407568, 0, -10.007708, 0, -2.5538887e-07, 0.018257678, 0.25260353, -0.07150924)
 script = ExtResource("3_4axhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1725602663]
