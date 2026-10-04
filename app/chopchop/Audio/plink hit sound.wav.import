@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxos57s6kvvvc"
+path="res://.godot/imported/plink hit sound.wav-04499eed5e156b841d0e921fa341762e.sample"
+
+[deps]
+
+source_file="res://Audio/plink hit sound.wav"
+dest_files=["res://.godot/imported/plink hit sound.wav-04499eed5e156b841d0e921fa341762e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -8,4 +8,4 @@ func _set_score(score: int) -> void:
 	%RichTextLabel.text = "[tornado]Score: " + str(score)
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Maps/FinaMap.tscn")
+	get_tree().change_scene_to_file("res://Maps/FinalMap.tscn")

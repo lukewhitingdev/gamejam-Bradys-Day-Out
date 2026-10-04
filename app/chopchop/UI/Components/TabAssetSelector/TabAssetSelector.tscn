@@ -29,12 +29,14 @@ grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
 tabs_position = 1
+tab_0/title = "Accessories"
 script = ExtResource("1_djv4d")
 Items = Array[ExtResource("2_hiclj")]([SubResource("Resource_d3pcb"), SubResource("Resource_joo38")])
 
 [node name="Hats" type="Label" parent="." unique_id=1659941314]
 layout_mode = 2
 metadata/_tab_index = 0
+metadata/_tab_name = "Accessories"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Hats" unique_id=223162322]
 layout_mode = 1
