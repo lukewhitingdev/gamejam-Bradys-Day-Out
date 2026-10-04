@@ -4,6 +4,8 @@ var cups: Array[PlinkoCup] = []
 
 @onready var horse_spawn: Marker3D = $HorseSpawn
 @onready var plinko_horse: PlinkoHorseScript = $PlinkoHorse
+@onready var scene = load("res://UI/PlinkoHud.tscn")
+@onready var hud_instance = scene.instantiate()
 
 var total_score: int = 0
 
@@ -16,7 +18,10 @@ func _ready():
 			cups.append(child as PlinkoCup) 
 
 	_setup_events(cups)
-
+	
+	hud_instance._set_score(total_score)
+	add_child(hud_instance)
+	
 func _setup_events(items: Array[PlinkoCup]):
 	for item in items:
 		item.OnScore.connect(_on_plinko_scored)
@@ -24,8 +29,9 @@ func _setup_events(items: Array[PlinkoCup]):
 func _on_plinko_scored(score: int):
 	print("Updated score to %s" % [score])
 	total_score += score
+	hud_instance._set_score(total_score)
 	await get_tree().create_timer(1.5).timeout
-	_reset_horse()
+	_reset_horse() 
 
 func _reset_horse():
 	
