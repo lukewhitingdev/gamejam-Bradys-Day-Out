@@ -36,7 +36,11 @@ transitionLerp = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9096345, 3.8369653)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=187705641]
-transform = Transform3D(1, 0, 0, 0, 0.7154609, 0.69865274, 0, -0.69865274, 0.7154609, 0, 2.4140344, 0)
+transform = Transform3D(0.9999813, 0.0016911913, -0.005896992, 0.006056598, -0.11925542, 0.9928452, 0.00097584294, -0.9928622, -0.119263425, 0, 2.3641143, 0.47894132)
+light_energy = 0.445
+light_angular_distance = 41.7
+shadow_enabled = true
+shadow_blur = 3.79
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1685444198]
 
