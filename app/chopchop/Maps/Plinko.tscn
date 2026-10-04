@@ -33,6 +33,8 @@ compositor = SubResource("Compositor_b1lj4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=841031461]
 transform = Transform3D(1, 0, 0, 0, 0.009323504, 0.99995655, 0, -0.99995655, 0.009323504, 4.194364, 26.187946, 0.68569326)
+visible = false
+shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=645152459]
 transform = Transform3D(169.39488, 0, 0, 0, 1, 0, 0, 0, 138.72176, 5.7732267, -5.103783, 2.1967869)
@@ -311,3 +313,12 @@ RodMaterial = SubResource("StandardMaterial3D_xqfex")
 transform = Transform3D(0.5, 0, 0, 0, -2.751948e-07, -0.49999997, 0, 6.295723, -2.1855692e-08, -11.322088, 15.953358, -2.1354332)
 HitSpeedRange = Vector2(10, 15)
 RodMaterial = SubResource("StandardMaterial3D_xqfex")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1837485846]
+transform = Transform3D(1, 0, 0, 0, 0.9986993, 0.050985627, 0, -0.050985627, 0.9986993, 6.8445625, 18.393515, 19.947445)
+light_color = Color(0.8605143, 0.7015325, 0.8725342, 1)
+light_energy = 1.255
+light_volumetric_fog_energy = 1.74
+shadow_enabled = true
+shadow_blur = 6.607
+sky_mode = 1
