@@ -87,7 +87,7 @@ use_collision = true
 material = SubResource("StandardMaterial3D_m5tmt")
 
 [node name="PaperTossHorse" parent="." unique_id=623002710 instance=ExtResource("1_4g1hd")]
-transform = Transform3D(3.006588, 0, 0, 0, 2.0442224, 0, 0, 0, 2.2789156, 0.19333589, -0.5884664, 4.684843)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.19333589, -0.5884664, 4.684843)
 BeginCameraPosition = Vector3(0, 0, 10)
 
 [node name="PaperTossReset" parent="." unique_id=997878136 instance=ExtResource("4_imv7t")]
