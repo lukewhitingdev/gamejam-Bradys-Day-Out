@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgpgc1pq6oh2t"
+path="res://.godot/imported/throw sound.wav-5cd57f58bc53241e8fee0f7796c9187f.sample"
+
+[deps]
+
+source_file="res://Audio/throw sound.wav"
+dest_files=["res://.godot/imported/throw sound.wav-5cd57f58bc53241e8fee0f7796c9187f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
