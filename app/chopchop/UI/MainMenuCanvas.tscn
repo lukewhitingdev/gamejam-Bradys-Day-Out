@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djw6u2q84etgi" path="res://UI/main_menu_canvas.gd" id="1_0o1g8"]
 [ext_resource type="Script" uid="uid://bnbekol7giqqt" path="res://UI/exit_button.gd" id="2_3h7ld"]
+[ext_resource type="AudioStream" uid="uid://bkj6dha3ar4v3" path="res://Audio/mouse click.wav" id="3_fv030"]
 
 [node name="MainMenuCanvas" type="CanvasLayer" unique_id=744911691]
 script = ExtResource("1_0o1g8")
@@ -59,6 +60,10 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 38
 text = "Exit"
 script = ExtResource("2_3h7ld")
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=25828534]
+stream = ExtResource("3_fv030")
+volume_db = -12.299
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="gui_input" from="VBoxContainer/CreditsButton" to="VBoxContainer/CreditsButton" method="_on_gui_input"]
