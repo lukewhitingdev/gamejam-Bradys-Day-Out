@@ -4,7 +4,7 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 	
-func _set_score(score: float) -> void:
+func _set_score(score: int) -> void:
 	%ScoreText.text = "Score: " + str(score)
 
 func _set_multiplier(multiplier: float) -> void:
