@@ -1,7 +1,7 @@
 class_name PlinkoCup extends Node3D
 
 @export var RodMaterial: StandardMaterial3D
-@export var Score: int = 0
+@export var Score: float = 0
 
 signal OnScore(score)
 
