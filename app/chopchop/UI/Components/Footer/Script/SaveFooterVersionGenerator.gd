@@ -1,5 +1,7 @@
 extends RichTextLabel
 
+
+@onready var ClickStreamPlayer: AudioStreamPlayer = $"../ClickStreamPlayer"
 @onready var rng
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +15,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		_generate_version()
 
 func _generate_version():
+	ClickStreamPlayer.play()
 	var major = rng.randi_range(0, 24)
 	var minor = rng.randi_range(0, 36)
 	var bugfix = rng.randi_range(0, 68)
