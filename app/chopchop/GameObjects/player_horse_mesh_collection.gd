@@ -16,8 +16,6 @@ func _load_horse() -> void:
 		
 	AddedHorseAccessoriesNodes.clear()
 	AddedHorseAccessories.clear()
-
-	print("horse defucked")
 		
 	for AccessoryData in Horsinator4000mk7.HorseAccessories:
 		_add_accessory(AccessoryData)
@@ -27,21 +25,25 @@ func _remove_last_accessory() -> void:
 		AddedHorseAccessoriesNodes.back().queue_free()
 		AddedHorseAccessoriesNodes.pop_back()
 		AddedHorseAccessories.pop_back()
+		
+func _can_add_accessory() -> bool:
+	return AddedHorseAccessories.size() < Horsinator4000mk7.MaxAccessoriesCount
 
 func _add_accessory(Data: HorseAccessoryData) -> void:
-	var scene = load(Data.AccessoryPath)
-	var instance = scene.instantiate()
-	add_child(instance)
-	instance.add_to_group("Accessories")
-	if !Data.bUseLocalTransform:
-		instance.global_transform = Data.AccessoryTransform
-		Data.AccessoryTransform = instance.transform
-		Data.bUseLocalTransform = true
-	else:
-		instance.transform = Data.AccessoryTransform
-		
-	AddedHorseAccessories.push_back(Data)
-	AddedHorseAccessoriesNodes.push_back(instance)
+	if _can_add_accessory():
+		var scene = load(Data.AccessoryPath)
+		var instance = scene.instantiate()
+		add_child(instance)
+		instance.add_to_group("Accessories")
+		if !Data.bUseLocalTransform:
+			instance.global_transform = Data.AccessoryTransform
+			Data.AccessoryTransform = instance.transform
+			Data.bUseLocalTransform = true
+		else:
+			instance.transform = Data.AccessoryTransform
+			
+		AddedHorseAccessories.push_back(Data)
+		AddedHorseAccessoriesNodes.push_back(instance)
 
 func _save_horse() -> void:
 	Horsinator4000mk7.HorseAccessories.clear()

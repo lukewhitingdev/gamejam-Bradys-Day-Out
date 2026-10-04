@@ -23,6 +23,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_cm3yt")
 
+[node name="AccessoriesCount" type="RichTextLabel" parent="." unique_id=1906251905]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Accessories: ##/##"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Button" type="Button" parent="." unique_id=429022490]
 custom_maximum_size = Vector2(100, -1)
 layout_mode = 2

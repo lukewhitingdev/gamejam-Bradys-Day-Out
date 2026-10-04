@@ -64,7 +64,7 @@ func _process(delta: float) -> void:
 			%cursorobj.rotation_degrees = Vector3(0, 0, 0)
 			%cursorobj.global_position = MouseNormal * 3 + %Camera3D.global_position
 			
-	%cursorobj.visible = !bMouseLook
+	%cursorobj.visible = !bMouseLook && ChildHorseNode._can_add_accessory()
 
 	
 func _unhandled_input(event: InputEvent) -> void:
@@ -82,9 +82,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		TargetRotation.x = clamp(TargetRotation.x, -89 * DegToRad, 2 * DegToRad)
 		
 	if event.is_action_pressed("Left_Click") && bValidPlacingPosition && hasCurrentSelectedAsset:
-		#var scene = currentSelectedAsset
-		#var instance = scene.instantiate()
-		#%Horse.add_child(instance)
 		var params: HorseAccessoryData = HorseAccessoryData.new()
 		params.AccessoryPath = currentSelectedAsset.resource_path
 		params.AccessoryTransform = %cursorobj.global_transform
