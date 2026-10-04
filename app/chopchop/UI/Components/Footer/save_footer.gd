@@ -1,4 +1,6 @@
-extends HBoxContainer
+class_name SaveFooterScript extends HBoxContainer
+
+signal OnFoldChanged(bool)
 
 @onready var Horse: Node3D = get_tree().get_first_node_in_group("HorseGroup")
 
@@ -11,3 +13,8 @@ func _on_button_2_pressed() -> void:
 	
 func _process(delta: float) -> void:
 	%AccessoriesCount.text = "Accessories: " + str(Horse.AddedHorseAccessories.size()) + " / " + str(Horsinator4000mk7.MaxAccessoriesCount)
+	get_tree().get_first_node_in_group("HorseGroup")._remove_last_accessory()
+
+
+func _on_foldable_container_folding_changed(is_folded: bool) -> void:
+	OnFoldChanged.emit(is_folded)

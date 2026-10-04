@@ -15,6 +15,13 @@ size_flags_horizontal = 10
 size_flags_vertical = 10
 script = ExtResource("1_r10ni")
 
+[node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=869341888]
+custom_maximum_size = Vector2(30, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+title_position = 1
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=139451529]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -45,6 +52,7 @@ size_flags_horizontal = 3
 text = "Undo
 "
 
+[connection signal="folding_changed" from="FoldableContainer" to="." method="_on_foldable_container_folding_changed"]
 [connection signal="gui_input" from="RichTextLabel" to="RichTextLabel" method="_on_gui_input"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
