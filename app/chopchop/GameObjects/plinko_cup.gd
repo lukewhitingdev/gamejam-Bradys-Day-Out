@@ -6,13 +6,17 @@ class_name PlinkoCup extends Node3D
 signal OnScore(score)
 
 func _ready() -> void:
-	var area3d = $StaticBody3D/Area3D
-	area3d.body_entered.connect(_hit_cup)
 	OnScore.connect(_Debug_Tally_Score)
-	var Meshes = [$StaticBody3D4/CollisionShape3D/MeshInstance3D,$StaticBody3D5/CollisionShape3D/MeshInstance3D,$StaticBody3D3/CollisionShape3D/MeshInstance3D,$StaticBody3D/Area3D/CollisionShape3D/MeshInstance3D]
-	#if Meshes.size() > 0:
-		#for Mesh in Meshes:
-			#Mesh.set_surface_override_material(0, RodMaterial)
+	
+	for StaticBody in get_children():
+		if StaticBody is StaticBody3D:
+			var StaticBodyChild = StaticBody.get_child(0)
+			if StaticBodyChild and StaticBodyChild is CollisionShape3D:
+				var Mesh = StaticBodyChild.get_child(0)
+				if Mesh and Mesh is MeshInstance3D:
+					Mesh.set_surface_override_material(0, RodMaterial)
+			elif StaticBodyChild and StaticBodyChild is Area3D:
+				StaticBodyChild.body_entered.connect(_hit_cup)
 
 func _hit_cup(body) -> void:
 	if body is RigidBody3D:
