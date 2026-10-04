@@ -7,6 +7,8 @@ extends Node3D
 
 @onready var PaperTossProgressBar: PaperTossProgressBarScript = $UI/Control/ProgressBar
 
+@onready var UIParent: Control = $UI/Control
+
 var total_score: int = 0
 
 var times_ran: int = 0
@@ -34,4 +36,4 @@ func _ResetHorse() -> void:
 		var scene = load("res://UI/paper_toss_finished_ui.tscn")
 		var instance = scene.instantiate()
 		instance._set_score(total_score)
-		add_child(instance)
+		UIParent.add_child(instance)
