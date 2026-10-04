@@ -135,6 +135,22 @@ size_flags_vertical = 0
 bbcode_enabled = true
 vertical_alignment = 1
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Control" unique_id=1457388890]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -345.0
+offset_right = -23.0
+offset_bottom = 102.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "How to play: 
+1. Hold down [right click]
+2. Swipe mouse in direction
+3. Release [right click] to toss"
+horizontal_alignment = 2
+
 [node name="PlinkoCup" parent="." unique_id=662861562 instance=ExtResource("5_7vvsj")]
 transform = Transform3D(3.157781, 0, 0, 0, 3.2982495, 0, 0, 0, 3.0771163, 7.6612744, -4.412638, -0.53003263)
 Score = 1000.0
