@@ -15,7 +15,7 @@ var lastShotWasIn = false
 var total_score: int = 0
 var times_ran: int = 0
 
-var currentMulti = 2 
+var currentMulti = 1 
 
 signal OnMultiplier(multi: int)
 
@@ -33,12 +33,12 @@ func _on_multiplier(multi: int):
 	_update_multiplier_ui(multi)
 
 func _update_multiplier_ui(multi: int):
-	if(multi > 1 && multi < 2):
+	if(multi > 1 && multi <= 2):
 		MultiplierText.visible = true
 		MultiplierText.text = "%sx Multiplier" % [str(multi)]
 		return
 
-	if(multi >= 2):
+	if(multi > 2):
 		MultiplierText.text = "[rainbow] %sx [/rainbow]  [wave] Multiplier [/wave]" % [str(multi)]
 		return
 
@@ -57,7 +57,7 @@ func _OnScore(_score) -> void:
 		OnMultiplier.emit(currentMulti)
 
 	lastShotWasIn = true
-	total_score += _score
+	total_score += _score * currentMulti
 	_ResetHorse()
 
 func _ResetHorse() -> void:
