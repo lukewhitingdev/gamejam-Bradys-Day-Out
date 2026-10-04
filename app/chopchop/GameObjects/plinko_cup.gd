@@ -10,8 +10,9 @@ func _ready() -> void:
 	area3d.body_entered.connect(_hit_cup)
 	OnScore.connect(_Debug_Tally_Score)
 	var Meshes = [$StaticBody3D4/CollisionShape3D/MeshInstance3D,$StaticBody3D5/CollisionShape3D/MeshInstance3D,$StaticBody3D3/CollisionShape3D/MeshInstance3D,$StaticBody3D/Area3D/CollisionShape3D/MeshInstance3D]
-	for Mesh in Meshes:
-		Mesh.set_surface_override_material(0, RodMaterial)
+	if Meshes.size() > 0:
+		for Mesh in Meshes:
+			Mesh.set_surface_override_material(0, RodMaterial)
 
 func _hit_cup(body) -> void:
 	if body is RigidBody3D:
