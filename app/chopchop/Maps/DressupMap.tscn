@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://c216im41bysuq" path="res://UI/PropThumbnails/sherriffthumb.png" id="23_mcfil"]
 [ext_resource type="Texture2D" uid="uid://dvnqe2ic21ii3" path="res://UI/PropThumbnails/glassesthumb.png" id="25_kmkpc"]
 [ext_resource type="Texture2D" uid="uid://cuegyr7ix2xei" path="res://UI/PropThumbnails/tophatthumb.png" id="27_m30a4"]
+[ext_resource type="PackedScene" uid="uid://i8c6b14eerb6" path="res://GameObjects/Environment/grass.tscn" id="30_tnpur"]
 
 [sub_resource type="Gradient" id="Gradient_yt8x4"]
 offsets = PackedFloat32Array(0.38157895, 1)
@@ -162,7 +163,7 @@ shadow_bias = 0.0
 environment = SubResource("Environment_h66jr")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=355926493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.014174, 0)
+transform = Transform3D(0.6929822, 0, 0, 0, 1, 0, 0, 0, 0.8620851, -0.1338737, -11.014174, 0)
 radius = 3.519043
 height = 22.029541
 sides = 48
@@ -203,6 +204,39 @@ Items = Array[ExtResource("4_ye5xf")]([SubResource("Resource_d3pcb"), SubResourc
 [node name="SaveFooter" parent="UI/ColorRect/VBoxContainer" unique_id=610904564 instance=ExtResource("6_q56ad")]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="grass" parent="." unique_id=274286477 instance=ExtResource("30_tnpur")]
+transform = Transform3D(30, 0, 0, 0, 44.168, 0, 0, 0, 30, 0.9084504, -0.009738326, -1.61671)
+
+[node name="grass2" parent="." unique_id=126986448 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, 0.7350096, -0.09186661, -1.8706043)
+
+[node name="grass3" parent="." unique_id=2075914541 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, 0.7350096, -0.13785219, 2.2071497)
+
+[node name="grass4" parent="." unique_id=120606555 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, 0.55861217, -0.13785219, 2.118577)
+
+[node name="grass5" parent="." unique_id=1100341155 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, 0.696147, -0.19397593, 1.9275782)
+
+[node name="grass6" parent="." unique_id=469642151 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -1.2695053, -0.19397593, 1.9275782)
+
+[node name="grass7" parent="." unique_id=208819748 instance=ExtResource("30_tnpur")]
+transform = Transform3D(30, 0, 0, 0, 44.168, 0, 0, 0, 30, -1.2695053, -0.11748564, 2.129543)
+
+[node name="grass8" parent="." unique_id=1318852848 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -1.0617051, -0.11748564, 2.046703)
+
+[node name="grass9" parent="." unique_id=467228814 instance=ExtResource("30_tnpur")]
+transform = Transform3D(30, 0, 0, 0, 44.168, 0, 0, 0, 30, -1.0617051, -0.11748564, -2.4071405)
+
+[node name="grass10" parent="." unique_id=109454455 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -1.0617051, -0.22654092, -2.5960786)
+
+[node name="grass11" parent="." unique_id=690226674 instance=ExtResource("30_tnpur")]
+transform = Transform3D(20, 0, 0, 0, 29.44466, 0, 0, 0, 20, -0.89216256, -0.093072295, -2.5960786)
 
 [connection signal="gui_input" from="UI/ColorRect" to="UI/ColorRect" method="_on_gui_input"]
 [connection signal="gui_input" from="UI/ColorRect/VBoxContainer" to="UI/ColorRect/VBoxContainer" method="_on_gui_input"]

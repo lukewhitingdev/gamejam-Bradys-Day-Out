@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://i8c6b14eerb6"]
+
+[ext_resource type="PackedScene" uid="uid://d0gwhrnr4fyhq" path="res://Models/horn.fbx" id="1_irks2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5divm"]
+albedo_color = Color(0.19782841, 0.42365828, 0.2489649, 1)
+
+[node name="grass" unique_id=274286477 instance=ExtResource("1_irks2")]
+
+[node name="horn" parent="." index="0" unique_id=1225321583]
+surface_material_override/0 = SubResource("StandardMaterial3D_5divm")
