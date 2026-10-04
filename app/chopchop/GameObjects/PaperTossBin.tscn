@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt4hm0f3x0dhn" path="res://GameObjects/plinko_cup.gd" id="1_tk7an"]
 [ext_resource type="PackedScene" uid="uid://6p5y0pfpth06" path="res://GameObjects/Environment/bin.tscn" id="2_6svbp"]
-[ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="3_3ouy0"]
+[ext_resource type="AudioStream" uid="uid://bdpwyfthufsww" path="res://Audio/reward sound plinko.wav" id="3_3ouy0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iubmt"]
 albedo_color = Color(1, 1, 0, 1)

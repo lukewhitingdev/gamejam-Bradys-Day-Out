@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcqaxobqrssin"]
 
 [ext_resource type="Script" uid="uid://dt4hm0f3x0dhn" path="res://GameObjects/plinko_cup.gd" id="1_iubmt"]
-[ext_resource type="AudioStream" uid="uid://doni6yu4o8smd" path="res://Audio/Vine Boom.mp3" id="2_qi12x"]
+[ext_resource type="AudioStream" uid="uid://bdpwyfthufsww" path="res://Audio/reward sound plinko.wav" id="2_qi12x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iubmt"]
 albedo_color = Color(1, 1, 0, 1)
