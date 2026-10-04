@@ -4,19 +4,30 @@
 [ext_resource type="PackedScene" uid="uid://dhpn27c2dsgj7" path="res://UI/Components/TabAssetSelector/TabAssetSelector.tscn" id="3_r8qcy"]
 [ext_resource type="PackedScene" uid="uid://bytlfirejfd70" path="res://GameObjects/Props/angelWingProp.tscn" id="4_0pwnk"]
 [ext_resource type="Script" uid="uid://d3eg2k2t5iaua" path="res://Scripts/GridItemData.gd" id="4_ye5xf"]
+[ext_resource type="Texture2D" uid="uid://bt6seo2dnfpmr" path="res://UI/PropThumbnails/angelwingsthumb.png" id="5_nr4pa"]
 [ext_resource type="PackedScene" uid="uid://bqeruht8xgo5f" path="res://GameObjects/Props/bowtieProp.tscn" id="6_0pwnk"]
 [ext_resource type="PackedScene" uid="uid://da4rmkrkeds84" path="res://UI/Components/Footer/SaveFooter.tscn" id="6_q56ad"]
-[ext_resource type="Texture2D" uid="uid://srqiga0ssrn8" path="res://Assets/placeholder.svg" id="6_qq275"]
 [ext_resource type="PackedScene" uid="uid://b4fgg4bnxnrc6" path="res://GameObjects/Props/coneProp.tscn" id="7_0pwnk"]
+[ext_resource type="Texture2D" uid="uid://6isqdsn5q86r" path="res://UI/PropThumbnails/bowtiethumb.png" id="7_afmvu"]
 [ext_resource type="PackedScene" uid="uid://c71oqg5dgctwa" path="res://GameObjects/Props/duckProp.tscn" id="8_6jmne"]
 [ext_resource type="PackedScene" uid="uid://bv8mpqxmsekxu" path="res://GameObjects/Props/eggProp.tscn" id="9_7t57g"]
+[ext_resource type="Texture2D" uid="uid://bol8hr48ogvin" path="res://UI/PropThumbnails/conethumb.png" id="9_tnpur"]
 [ext_resource type="PackedScene" uid="uid://bqcptvuhndhqi" path="res://GameObjects/Props/emoHairProp.tscn" id="10_7t57g"]
 [ext_resource type="PackedScene" uid="uid://bdwvcqeuhxu1j" path="res://GameObjects/Props/hornProp.tscn" id="11_46v5c"]
+[ext_resource type="Texture2D" uid="uid://d0dmpa6ywwxwn" path="res://UI/PropThumbnails/duckythumb.png" id="11_bfgaf"]
 [ext_resource type="PackedScene" uid="uid://dceip6uqvb6j2" path="res://GameObjects/Props/horseProp.tscn" id="12_0p6cv"]
+[ext_resource type="Texture2D" uid="uid://r7olykdkkkcj" path="res://UI/PropThumbnails/eggthumb.png" id="13_mitln"]
 [ext_resource type="PackedScene" uid="uid://c6u1q0b12ekig" path="res://GameObjects/Props/moustacheProp.tscn" id="13_qcrb5"]
 [ext_resource type="PackedScene" uid="uid://b5p0mj3d5y1xr" path="res://GameObjects/Props/sheriffBadgeProp.tscn" id="14_an2ts"]
+[ext_resource type="Texture2D" uid="uid://dpcatykwijbw6" path="res://UI/PropThumbnails/emohairthumb.png" id="15_8hsfj"]
 [ext_resource type="PackedScene" uid="uid://cnkyhb5r6rii4" path="res://GameObjects/Props/sunglassesProp.tscn" id="15_qcrb5"]
 [ext_resource type="PackedScene" uid="uid://r15o3pjvut2k" path="res://GameObjects/Props/tophatProp.tscn" id="16_an2ts"]
+[ext_resource type="Texture2D" uid="uid://dwmm4a1hfblod" path="res://UI/PropThumbnails/hornthumb.png" id="17_r7jga"]
+[ext_resource type="Texture2D" uid="uid://cjppsdgqaiwm8" path="res://UI/PropThumbnails/horsethumb.png" id="19_x5w1g"]
+[ext_resource type="Texture2D" uid="uid://d20remm5kf57p" path="res://UI/PropThumbnails/moustachethumb.png" id="21_nr4pa"]
+[ext_resource type="Texture2D" uid="uid://c216im41bysuq" path="res://UI/PropThumbnails/sherriffthumb.png" id="23_mcfil"]
+[ext_resource type="Texture2D" uid="uid://dvnqe2ic21ii3" path="res://UI/PropThumbnails/glassesthumb.png" id="25_kmkpc"]
+[ext_resource type="Texture2D" uid="uid://cuegyr7ix2xei" path="res://UI/PropThumbnails/tophatthumb.png" id="27_m30a4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dwbp"]
 
@@ -38,84 +49,84 @@ albedo_color = Color(0, 0.14025977, 0, 1)
 [sub_resource type="Resource" id="Resource_d3pcb"]
 script = ExtResource("4_ye5xf")
 Name = "Angel Wings"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("5_nr4pa")
 Asset = ExtResource("4_0pwnk")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_2spav"]
 script = ExtResource("4_ye5xf")
 Name = "bowtie"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("7_afmvu")
 Asset = ExtResource("6_0pwnk")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_q56ad"]
 script = ExtResource("4_ye5xf")
 Name = "Cone"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("9_tnpur")
 Asset = ExtResource("7_0pwnk")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_msrnv"]
 script = ExtResource("4_ye5xf")
 Name = "Duck"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("11_bfgaf")
 Asset = ExtResource("8_6jmne")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_e12o6"]
 script = ExtResource("4_ye5xf")
 Name = "Egg"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("13_mitln")
 Asset = ExtResource("9_7t57g")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_ul1a7"]
 script = ExtResource("4_ye5xf")
 Name = "Emo Hair"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("15_8hsfj")
 Asset = ExtResource("10_7t57g")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_7t57g"]
 script = ExtResource("4_ye5xf")
 Name = "Horn"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("17_r7jga")
 Asset = ExtResource("11_46v5c")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_q2xwe"]
 script = ExtResource("4_ye5xf")
 Name = "Horse"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("19_x5w1g")
 Asset = ExtResource("12_0p6cv")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_pj3nd"]
 script = ExtResource("4_ye5xf")
 Name = "Moustache"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("21_nr4pa")
 Asset = ExtResource("13_qcrb5")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_yu4qx"]
 script = ExtResource("4_ye5xf")
 Name = "Sheriff Badge"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("23_mcfil")
 Asset = ExtResource("14_an2ts")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_n7jug"]
 script = ExtResource("4_ye5xf")
 Name = "Sunglasses"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("25_kmkpc")
 Asset = ExtResource("15_qcrb5")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
 [sub_resource type="Resource" id="Resource_ngluk"]
 script = ExtResource("4_ye5xf")
 Name = "Top Hat"
-AssetImage = ExtResource("6_qq275")
+AssetImage = ExtResource("27_m30a4")
 Asset = ExtResource("16_an2ts")
 metadata/_custom_type_script = "uid://d3eg2k2t5iaua"
 
